@@ -66,6 +66,13 @@ CORS_ORIGIN_WHITELIST=[
 ]
 ROOT_URLCONF = 'prueba.urls'
 
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'leycourcino@gmail.com'
+EMAIL_HOST_PASSWORD = 'ancestral1995'
+EMAIL_USE_TLS = True
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

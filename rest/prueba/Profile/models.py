@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from django.core.mail import send_mail
 
 class Profile(models.Model):
 
@@ -14,8 +14,8 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     
     phone = models.CharField(("Telefono"), max_length=10)
-    location =  models.CharField(("Ubiación"),choices=locations_MX,max_length=3) 
-    #photo = models.ImageField(("Foto de Perfil"), upload_to='photos/')
+    location =  models.CharField(("Ubiación"),choices=locations_MX,max_length=15) 
+    
     
     class Meta:
         verbose_name = "Perfile"

@@ -6,6 +6,7 @@ from rest_framework.permissions import IsAdminUser, IsAuthenticated,AllowAny
 from rest_framework import status
 #from rest_framework.response import Response
 from .permissions import *
+from django.core.mail import send_mail
 # Create your views here.
 
 ####Event@@@@@@@@@@@   
@@ -18,6 +19,8 @@ class EventAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset= Event.objects.all()
     serializer_class= EventSerializer
     permission_classes=[IsAuthenticated]
+
+
 
 ####/Event@@@@@@@@@@@   
 
