@@ -1,0 +1,22 @@
+.event__header{
+  
+    display: flex;
+    animation-name: anim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    
+}
+h2{
+    color: white;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+
+    @keyframes anim{
+        0% {background-color: #ff0;} /*Amarillo*/
+       25% {background-color: #f80;} /*Naranja*/
+       50% {background-color: #000;} /*Negro*/
+       75% {background-color: #f85032;} /*Otra vez naranja*/
+      100% {background-color: #e73827;} /*Otra vez amarillo*/
+    }
+}

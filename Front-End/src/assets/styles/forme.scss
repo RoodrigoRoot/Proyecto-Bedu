@@ -1,0 +1,88 @@
+.content__form{
+    display: flex;
+    background-color: white;
+    margin: 20px;
+    border-radius: 5px;
+      
+    
+}
+.reg__img{
+    
+    
+    
+    width:100%;
+    border-radius: 5px;
+
+}
+
+.form__event{
+    
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-bottom: 5%;
+
+    h4{
+        margin: 0;
+    }
+
+    h2{
+        color:black;
+        font-family: 'Lato', sans-serif;
+        
+    }
+
+
+    label{
+        color: white;
+        font-weight:bold;
+    }
+    width: 80%;
+
+    input{
+        font-family: 'Montserrat', sans-serif;
+        width: 80%;
+        height: 30px;
+        border-radius: 5px;
+        text-align: center;
+        margin: 5px;
+
+    }
+::placeholder{
+font-weight: bold;
+color: black;
+}
+
+
+    #send{
+        margin-top: 10px;
+        font-size: 24px;
+        width: 60%;
+        border: none;
+        color: black;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        border: 1px solid #222;
+    }
+
+    #send:hover{
+        background-color: #CFA92C;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .event__invite{
+        
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px;
+        .invite{
+            display: block;
+            width: 25%;
+        }
+    }
+}

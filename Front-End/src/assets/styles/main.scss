@@ -1,0 +1,28 @@
+#Main__content{
+        font-family: 'Lato', sans-serif;
+        position: relative;
+        display: inline-block;
+        
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        #video{ 
+                margin: 0;
+                padding: 0;
+                margin-left: 6px;
+                width: 99%;  
+                height: 100%;
+                border-radius:10px ;
+                position: relative;
+                filter: contrast(250%);
+                opacity: 0.4
+        }
+        h1{
+                color: white;
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+        }
+}

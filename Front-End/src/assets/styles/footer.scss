@@ -1,0 +1,47 @@
+$font-size:18px;
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #101010;
+    .footer__social{
+        
+        
+    .social__icons{
+        padding: 10px;
+        margin-right: 10px;
+        
+    img{
+        height: 35px;
+        filter:invert(100%);
+        
+    }
+    img:hover{
+    filter: invert(25%);
+    }
+}
+        
+    }
+   
+    }
+
+.rights{
+    font-size: $font-size;
+    color: white;
+}
+
+.footer__number{
+    font-size: $font-size;
+    color: white;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+}
+

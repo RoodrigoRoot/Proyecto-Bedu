@@ -1,0 +1,66 @@
+#login__content{
+    
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h2{
+        margin-left: 25px;
+        color: white;
+        margin-bottom: 4rem;
+    }
+    p{
+        margin-left: 35px;
+        font-size: 20px;
+    }
+    img{
+            width: 99.9vw;
+            height: 90.2vh;
+            filter: blur(5px);
+    }
+
+    .login__center{
+        color: white;
+            display: inline-block;
+            text-align: center;
+            position: absolute;
+            
+            top: 5%;
+            left: 30%;
+            height: 80%;
+            background-color: transparent;
+            #btn{
+                margin-top: 3rem;
+                border: 1px white solid;
+                border-radius: 5px;
+                font-size: 25px;
+            }
+            #btn:hover{
+                cursor: pointer;
+                background-color: #CFA92C;
+            }
+    }
+
+    .login__center form input{
+        
+        background-color: transparent;
+        border: none;
+        color: white;
+        border-bottom: 1px white solid;
+        width: 100%;
+        text-align: center;
+    }
+
+    .login__center form input,label{
+        font-size: 20px;
+        margin: 20px;
+        
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+::placeholder{
+    text-align: center;
+}

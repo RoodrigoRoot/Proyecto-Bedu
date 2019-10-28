@@ -1,0 +1,52 @@
+.event__list{
+    margin-top: 10px;
+    width: 50%;
+    height: 467px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 60px;
+    margin-left: 5px;
+    font-family: 'Prociono', serif;
+    .event_title::before,.event_title::after {
+        content: "♥";
+      }
+    .event_title{
+        
+        font-size: 20px;
+        border-bottom: 2px solid black;
+        
+    }
+    h2{
+        color: #e74c3c;
+
+    }
+
+    h2,h4{
+        margin: 0;
+        padding: 0;
+        
+    }
+}
+
+.event__list:hover{
+    
+}
+
+.event__card{
+    padding: 0 auto;
+    margin: 20px;
+
+    .event__h{
+        font-size: 30px;
+        
+        margin: 20px;
+    }
+    .event__data{
+        margin:25px;
+        font-size: 20px;
+    }
+
+}
+
+

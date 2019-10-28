@@ -1,0 +1,107 @@
+$font-size:18px;
+
+
+header{
+    width: 100%;
+    border: 5px black;
+    margin-bottom: .2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    
+    #name{
+        animation-name:name;
+        animation-duration: 2s;
+        position: relative;
+        h1{
+            color: white;
+            
+        }
+    
+    }
+}
+
+@keyframes name{
+    0%{top: -50px;}
+    100%{top: 0px;}
+}
+
+#meet__logo{
+    background-color: transparent;
+    h2{
+        animation-name: slash;
+    animation-duration: 2s;  position: relative;
+        
+        font-size: 2rem;
+        text-align: center;
+       
+
+    a{
+        
+        font-size: 2rem;;
+        text-decoration: none;
+        color: #CFA92C;
+        
+        
+        animation-name: slash;
+        animation-duration: 1s;  position: relative;
+        margin-right: 10px;
+        margin-bottom: 50px;
+        
+        
+    }
+    }
+}
+
+@keyframes slash {
+    0%   {top: 50px;}
+    
+    50%  {top: 0px; }
+    
+    100% {top: 0px; }
+  }
+
+
+#meet__links{
+    list-style-type: none;
+    display: flex;
+    
+
+}
+
+#meet__links a{
+    text-decoration: none;
+    color: #CFA92C;
+    animation-name: sing;
+    animation-duration: 1s;  position: relative;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+
+
+@keyframes sing {
+0%   {top: 50px; left: 0px;}
+    
+    0%  {top: 0px; left: 150px;}
+    
+    100% {top: 0px; left: 0px;}
+  }
+#meet__links a:hover{
+    
+    color: #F2F5A9;
+    padding-bottom: 15px;
+    border-bottom: 1px rgb(250, 193, 7) solid;
+    
+}
+
+hr{
+    margin-left: 10rem;
+    width: 80%;
+    
+}

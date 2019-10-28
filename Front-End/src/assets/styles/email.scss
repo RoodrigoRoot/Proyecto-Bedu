@@ -1,0 +1,23 @@
+.email__content{
+
+   .title{
+       width: 160%;
+       padding-bottom: 15px;
+       border-bottom: 1px solid white;
+       
+   }
+
+    margin-left: 15px;
+    color:white;
+    h2{
+        margin: 0;
+        padding: 0;
+    }
+    .form__event label,input{
+        margin: 10px;
+    }
+    .form__event input{
+        font-size: 18px;
+        font-family: 'Lato', sans-serif;
+    }
+}

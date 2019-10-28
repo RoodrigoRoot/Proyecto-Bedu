@@ -1,0 +1,10 @@
+.main__social{
+    position: absolute;
+    top:00;
+    right: 0;
+    filter:invert(100%);
+    .main__icons{ margin-right: 10px;}
+   img:hover{
+       filter: blur(2px);
+   }
+}
