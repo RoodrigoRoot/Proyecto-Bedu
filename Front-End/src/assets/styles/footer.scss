@@ -7,7 +7,7 @@ footer{
     font-family: 'Montserrat', sans-serif;
     background-color: #101010;
     .footer__social{
-        
+    
         
     .social__icons{
         padding: 10px;
@@ -45,3 +45,28 @@ footer{
     }
 }
 
+@media only screen and (max-width:480px){
+
+.footer__number{
+    font-size: 15px;
+    text-align: center;
+}
+.rights{
+    font-size: 15px;
+    text-align: center;
+}
+
+.footer__social{
+    .social__icons{
+        padding: 0;
+        margin-right: 0;
+        
+        display: flex;
+        img{
+            
+            filter: blur(0%);
+        }
+    }
+}
+
+}

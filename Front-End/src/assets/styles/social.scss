@@ -8,3 +8,8 @@
        filter: blur(2px);
    }
 }
+@media only screen and (max-width:480px){
+    .main__social{
+        display: none;
+    }
+}

@@ -25,6 +25,7 @@
             
         }
     }
+
 }
 
 #roast:hover {
@@ -37,4 +38,24 @@
     width: 60%;
     font-family: 'Lato', sans-serif;
     font-size: 22px;
+}
+
+@media only screen and (max-width:480px){
+   .section{
+       height: 15%;
+   }
+   .section__container{
+       display: block;
+       .section__container__text{
+           width: 100%;
+           text-align: center;
+       }
+    article{
+        #roast{
+            margin-left: 3px;
+            width: 98%;
+            height: 40%;
+        }
+    }
+}
 }
