@@ -20,7 +20,7 @@ const Section = () => {
                         </p>
                     </article>
 
-                    <article>
+                    <article className="section__article">
                         <img id="roast" src="https://media2.giphy.com/media/l378AwfJ7pqLlRHr2/giphy.gif?cid=790b761104fcd4fdda31cd4eb8ceeea4ed63d1b61043311e&rid=giphy.gif" alt="Carne" />
                     </article>
                 </div>

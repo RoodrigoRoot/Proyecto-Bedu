@@ -4,7 +4,7 @@ $font-size:18px;
 header{
     width: 100%;
     border: 5px black;
-    margin-bottom: .2rem;
+    margin-bottom: .2rem; 
     font-family: 'Montserrat', sans-serif;
 }
 nav{
@@ -104,4 +104,26 @@ hr{
     margin-left: 10rem;
     width: 80%;
     
+}
+
+@media only screen and (max-width:480px){
+    header{
+        hr{
+            margin-left: 5rem;
+            width: 60%;
+        }
+        #meet__logo .Link__h2{
+            font-size: 15px;
+            margin: 0;            
+            padding: 0;
+            
+        }
+        #name{
+            margin-left: 15%;
+            font-size: 8px;
+        }
+        .meet__li__sing{
+            font-size: 8px;
+        }
+}
 }

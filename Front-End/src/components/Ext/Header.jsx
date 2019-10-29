@@ -35,7 +35,7 @@ class Header extends Component {
             <header>
                 <nav>
                     <div id="meet__logo">
-                        <h2><Link className="Link" to="/">Le Carne Asade</Link></h2>
+                        <h2><Link className="Link__h2" to="/">Le Carne Asade</Link></h2>
                     </div>
 
                     <div id="name"><h1>{this.state.welcome}</h1></div>
@@ -49,7 +49,7 @@ class Header extends Component {
                         </ul>
                     </div>
                 </nav>
-                <hr />
+                <hr id="hr" />
             </header>
 
         )
