@@ -108,22 +108,32 @@ hr{
 
 @media only screen and (max-width:480px){
     header{
+        .Link__h2  h2{
+            font-size: 150px;
+            background-color: red;
+        }
         hr{
             margin-left: 5rem;
             width: 60%;
         }
-        #meet__logo .Link__h2{
-            font-size: 15px;
-            margin: 0;            
-            padding: 0;
-            
+
+
+        #name {
+            display: none;
         }
-        #name{
-            margin-left: 15%;
-            font-size: 8px;
-        }
-        .meet__li__sing{
-            font-size: 8px;
-        }
+#meet__links{
+    margin: 0;
+    padding: 0;
+    display: block;
+    .meet__li__sing ,.meet__li__reg{
+        font-size: 5px;
+    
+   }
 }
+#meet__links a:hover{
+    border: none;
+
+}
+}
+
 }
