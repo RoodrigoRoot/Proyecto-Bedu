@@ -47,7 +47,7 @@ class Login extends Component {
             <Fragment>
 
                 <div id="login__content">
-                    <img src="https://i2.wp.com/thehappening.com/wp-content/uploads/2017/06/portada-55.jpg?fit=1024%2C694&ssl=1" alt="Login" />
+                    <img className="img__login" src="https://i2.wp.com/thehappening.com/wp-content/uploads/2017/06/portada-55.jpg?fit=1024%2C694&ssl=1" alt="Login" />
 
                     <div className="login__center">
                         <h2>Inicio de Sesión</h2>
