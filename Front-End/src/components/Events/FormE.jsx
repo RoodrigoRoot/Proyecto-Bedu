@@ -40,7 +40,7 @@ class FormE extends React.Component{
             })
             
             
-            let {data} = request
+        //    let {data} = request
             console.log("Solicitud",request)
 
 
