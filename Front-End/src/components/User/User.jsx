@@ -50,7 +50,7 @@ class User extends React.Component {
 
             }
 
-            let request = await fetch(`http://localhost:8000/api/usuarios/${localStorage.getItem('user_id')}`, {
+             await fetch(`http://localhost:8000/api/usuarios/${localStorage.getItem('user_id')}`, {
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": `token ${localStorage.getItem('token')}`
