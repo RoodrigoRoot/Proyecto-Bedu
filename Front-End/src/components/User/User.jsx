@@ -77,7 +77,7 @@ class User extends React.Component {
 
             })
             let { data } = request
-
+            console.log(data)
             this.setState({
                 username: data.username,
                 email: data.email,

@@ -9,6 +9,7 @@
         display: flex;
         justify-content: center;
         text-align: center;
+        width: 100%;
         label{
             margin-right: 50%;
             color: white;
@@ -16,9 +17,14 @@
         input{
             text-align: center;
             margin-right: 150px;
+            border-radius: 5px;
+            width: 20%;
+            padding: 1.5%;
+            
         }
         label, input{
             margin-top: 10px;
+            font-size: 18px;
         }
         background-color: #222;
         border-radius: 5px;
