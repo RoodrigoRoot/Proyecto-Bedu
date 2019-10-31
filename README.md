@@ -1,6 +1,11 @@
 # Carnitas-Bedu
+## Proyecto de Terminación del Bootcamp "Full-Stack Python"
 
-# Instalación del Proyecto
+El proposito es crear una Plataforma Web, para la creación de una Carnita Asada entre amigos, notificandolos por correo.
+
+Dicha plataforma está hecha con ReactJS(Javascript) para el Front-End y Django(Python) para el Back-End
+
+# Instalación
 ## Back-End (Django-Python)
   ##### Requerimientos
   Tener un entorno virtual activado para instalar lo siguiente:
