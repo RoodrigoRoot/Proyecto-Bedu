@@ -8,5 +8,5 @@
    - Django-Rest-Framework
    - Cors-Headers
    
-## Front-End
+## Front-End (RestJS-Javascript)
   ##### Solo ejecutar el comando npm install
