@@ -3,7 +3,7 @@
 # Instalación del Proyecto
 
 ### Back-End (Django-Python)
-  ##Requerimientos
+  ## Requerimientos
    - Django
    - Django-Rest-Framework
    - Cors-Headers
