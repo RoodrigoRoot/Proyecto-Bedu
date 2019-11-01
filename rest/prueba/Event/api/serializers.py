@@ -1,7 +1,7 @@
 from rest_framework import serializers, status
 from ..models import *
 from django.core.mail import send_mail
-
+from django.template import loader
 class EventSerializer(serializers.ModelSerializer):
     
     class Meta:
@@ -26,12 +26,15 @@ class EventSerializer(serializers.ModelSerializer):
             date = validated_data['date'],
        
         )
+        
+        html_message=loader.render_to_string('email.html',locals())
         send_mail(
-            'Subject here',
+            'Psst! Una carnita Asada Espera.',
             'Carnita Asada Creada',
             'leycourcino@gmail.com',
             [event.email1,event.email2,event.email3,event.email4,event.email5,event.email6,event.email7],
             fail_silently=False,
+            html_message=html_message
         )
         return event
        
