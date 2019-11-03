@@ -20,28 +20,34 @@ class FormE extends React.Component{
             cp:"",
             references:"",
             date:"",
-            
+            hour:""
 
         }
     }
 
     _onSubmit= async (e)=>{
-        const {name_event,creator,street,col,cp,references,date,email1,email2,email3,email4,email5,email6} = this.state
+        const {name_event,creator,street,col,cp,references,date,email1,email2,email3,email4,email5,email6,hour} = this.state
+        
+        const input= {
+            name_event,creator,street,col,cp,references,date,email1,email2,email3,email4,email5,email6,hour}
         
         e.preventDefault()
         try{
-            
-            const request = await axios.post('http://localhost:8000/api/eventos/',{name_event,creator,street,col,cp,references,date,email1,email2,email3,email4,email5,email6,
+            console.log(name_event,creator,street,col,cp,references,date,email1,email2,email3,email4,email5,email6)
+            const request = await fetch('http://localhost:8000/api/eventos/',{
+            body: JSON.stringify(input),
+            method: 'POST',
                 headers:{
                     "Content-Type":"application/json",
                     "Authorization":`token ${localStorage.getItem('token')}`
-                }
+                },
+                
             
             })
             
             
         //    let {data} = request
-            console.log("Solicitud",request)
+            alert("Evento Creado")
 
 
         }catch(error){
@@ -176,6 +182,13 @@ class FormE extends React.Component{
                         value={this.state.date}
                         onChange={this.handleChange}
                         name="date"
+                        required
+                        />
+                        
+                        <input type="time"
+                        value={this.state.hour}
+                        onChange={this.handleChange}
+                        name="hour"
                         required
                         />
                        
