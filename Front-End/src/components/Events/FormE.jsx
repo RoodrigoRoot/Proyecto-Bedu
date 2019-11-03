@@ -33,7 +33,7 @@ class FormE extends React.Component{
         e.preventDefault()
         try{
             console.log(name_event,creator,street,col,cp,references,date,email1,email2,email3,email4,email5,email6)
-            await fetch('http://localhost:8000/api/eventos/',{
+            await fetch('http://ec2-13-58-232-56.us-east-2.compute.amazonaws.com/api/eventos/',{
             body: JSON.stringify(input),
             method: 'POST',
                 headers:{
@@ -48,7 +48,7 @@ class FormE extends React.Component{
         
             alert("Evento Creado")
 
-            window.location.replace('http://localhost:3000/Eventos')
+            window.location.replace('http://ec2-13-58-232-56.us-east-2.compute.amazonaws.com/Eventos')
         }catch(error){
 
             console.log(error.message)

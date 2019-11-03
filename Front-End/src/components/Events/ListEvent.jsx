@@ -23,7 +23,7 @@ constructor(props) {
 
 async getEvent(){
     try{
-        let request = await axios.get('http://localhost:8000/api/eventos/',{
+        let request = await axios.get('http://ec2-13-58-232-56.us-east-2.compute.amazonaws.com/api/eventos/',{
             headers:{
                 "Content-Type":"application/json",
                 "Authorization":`token ${localStorage.getItem('token')}`

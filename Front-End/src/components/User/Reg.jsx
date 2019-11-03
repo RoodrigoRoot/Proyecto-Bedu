@@ -35,7 +35,7 @@ class Register extends Component {
     }
 
     try {
-      let request = await fetch('http://localhost:8000/api/usuarios/', {
+      let request = await fetch('http://ec2-13-58-232-56.us-east-2.compute.amazonaws.com/api/usuarios/', {
         body: JSON.stringify(input),
         method: 'POST',
         headers: {
