@@ -1,6 +1,5 @@
 import React from 'react'
 import '../../assets/styles/forme.scss'
-import axios from 'axios'
 
 class FormE extends React.Component{
     constructor(props){
@@ -34,7 +33,7 @@ class FormE extends React.Component{
         e.preventDefault()
         try{
             console.log(name_event,creator,street,col,cp,references,date,email1,email2,email3,email4,email5,email6)
-            const request = await fetch('http://localhost:8000/api/eventos/',{
+            await fetch('http://localhost:8000/api/eventos/',{
             body: JSON.stringify(input),
             method: 'POST',
                 headers:{
@@ -46,10 +45,10 @@ class FormE extends React.Component{
             })
             
             
-        //    let {data} = request
+        
             alert("Evento Creado")
 
-
+            window.location.replace('http://localhost:3000/Eventos')
         }catch(error){
 
             console.log(error.message)
