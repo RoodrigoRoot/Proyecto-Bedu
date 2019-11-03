@@ -11,15 +11,15 @@ class Event(models.Model):
     email4 = models.EmailField(("Cuarto invitado"), max_length=254,blank=True)
     email5 = models.EmailField(("Quinto invitado"), max_length=254,blank=True)
     email6 = models.EmailField(("Sexto invitado"), max_length=254,blank=True)
-    email7 = models.EmailField(("Septimo invitado"), max_length=254,blank=True)
+    
     street = models.CharField(("Calle"), max_length=50,blank=False)
     col = models.CharField(("Colonia"), max_length=50,blank=True,default="Sin nombre")
     cp = models.CharField(("C.P"), max_length=50,default="SN")
     references= models.TextField(("Referencias"))
     created = models.DateTimeField(auto_now=False, auto_now_add=True)
     modified = models.DateTimeField(auto_now=True, auto_now_add=False)
-    date = models.CharField(("Fecha Final"),default="00:00:0000T",max_length=12)
-
+    date = models.DateField(("Fecha Final"),default="00:00:0000T",max_length=12)
+    hour = models.TimeField(auto_now=False, auto_now_add=False)
     def __str__(self):
         return self.name_event
 

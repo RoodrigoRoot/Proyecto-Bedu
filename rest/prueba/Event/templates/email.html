@@ -5,8 +5,31 @@
         </title>
     </head>
     <body>
-        <h1>Psst! Psst!</h1>
-        <h3>Oye, we tu amigo, que digo tu amigo, tu hermano <h2>{{event.creator.user.first_name}} </h2>esta planeando una carnita asada</h3>
-        Porque no te registras<a href="http://localhost:8000/Registro">Aquí</a>
+        <div style="background-color: #222; color: white; text-align: center;">
+            <div style="background-color: #2F120D;">
+                <h2>Hora de las Carnitas</h2>
+            </div>
+            <h1>Psst! Psst!</h1>
+            <h3>Oye, we tu amigo, que digo tu amigo, tu hermano <h2>"{{event.creator.user.first_name}} {event.creator.user.last_name}}" </h2>esta planeando una carnita asada</h3>
+            <h2>¿Dónde?</h2>
+            <h3>Excelente Pregunta!!</h3>
+            <h2>Sera en:{{event.street}}</h2>
+            <h2>Colonia: {{event.col}}</h2>
+            <h2>Codigo postal:{{event.cp}}</h2>
+            <h2>Referencias:</h2>
+            <h2>{{event.references}}</h2>
+           <h2>¿Cuándo?</h2>
+           <h2>{{event.date}}</h2>
+           <h2>{{event.hour}}</h2>
+            <hr>
+            <h3>Oye, bebe ¿Y si nos apoyas registrandote y para que las carnitas aumenten?</h3>
+            Porque no te registras <a href="http://localhost:8000/Registro">Aquí</a>
+            
+            <h2>Por un México bien Carnoso y mas Sabroso</h2>
+            <div style="background-color: #2F120D;">
+                    <h1><a href="http://locahost:3000">Le Carne Asade</a></h1>
+                </div>
+
+        </div>
     </body>
 </html>

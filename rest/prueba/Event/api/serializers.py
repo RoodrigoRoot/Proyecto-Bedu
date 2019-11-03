@@ -6,7 +6,7 @@ class EventSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Event
-        fields = ("id","name_event","creator","email1","email2","email3","email4","email5","email6","email7","street","col","cp","references","date")
+        fields = ("id","name_event","creator","email1","email2","email3","email4","email5","email6","street","col","cp","references","date","hour")
         
     def create(self,validated_data):
         event = Event.objects.create(
@@ -18,8 +18,8 @@ class EventSerializer(serializers.ModelSerializer):
             email4 = validated_data['email4'],
             email5 = validated_data['email5'],
             email6 = validated_data['email6'],
-            email7 = validated_data['email7'],
             street = validated_data['street'],
+            hour = validated_data['hour'],
             col = validated_data['col'],
             cp = validated_data['cp'],
             references = validated_data['references'],
@@ -32,7 +32,7 @@ class EventSerializer(serializers.ModelSerializer):
             'Psst! Una carnita Asada Espera.',
             'Carnita Asada Creada',
             'leycourcino@gmail.com',
-            [event.email1,event.email2,event.email3,event.email4,event.email5,event.email6,event.email7],
+            [event.email1,event.email2,event.email3,event.email4,event.email5,event.email6],
             fail_silently=False,
             html_message=html_message
         )
