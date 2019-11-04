@@ -16,8 +16,8 @@ return(
         <br/>
         <br/>
         <br/>
-        <h3 className="not__seems">seems like you are lost here.</h3> 
-        <h3 className="not__found"> Get back to home</h3>           
+        <h2 className="not__seems">seems like you are lost here.</h2> 
+        <h2 className="not__found"> Get back to home</h2>           
        </div>
     </div>
 )
