@@ -78,9 +78,12 @@
     .img__login{
         display: none;
     }
+    #login__content{
     .login__center{
         margin-left: 40px;
+        border: none;
     }
+}
     footer{
         position: absolute;
         bottom: -20%;

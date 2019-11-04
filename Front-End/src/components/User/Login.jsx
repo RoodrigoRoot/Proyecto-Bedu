@@ -57,7 +57,7 @@ class Login extends Component {
                             <label><strong> Usuario:</strong></label>
 
                             <input type="text"
-                                placeholder="Nombre de Usuario"
+                                placeholder="Usuario"
                                 name="username"
                                 value={this.state.username}
                                 onChange={this.handleInputChange}
