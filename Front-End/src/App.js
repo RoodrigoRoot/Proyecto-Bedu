@@ -9,12 +9,9 @@ import Profile from './pages/Profile'
 import  {BrowserRouter,Route,Switch} from 'react-router-dom'
 import Layoult from './components/Ext/Layoutl'
 import CreateEvent from './components/Events/FormE'
-
+import NotFound from './pages/NotFound'
 
 class App extends React.Component{
-
-  
-
     render(){
     return(
     <BrowserRouter>
@@ -28,6 +25,7 @@ class App extends React.Component{
                 <Route exact path ="/Perfil" component={Profile}/>
                 <Route exact path ="/Perfil/:id" children={<Profile/>}/>
                 <Route exact path ="/Carne" component={CreateEvent}/>
+                <Route component={NotFound}/>
                
             </Switch>
             </Layoult>

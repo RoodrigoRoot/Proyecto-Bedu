@@ -8,7 +8,7 @@ const Social = () => {
 
                 <div className="main__social">
                         <a className="main__icons" href="https://twitter.com/FrezRod"><img src={twitt} alt="Twiiter" /> </a>
-                        <a className="main__icons" href="https://twitter.com/FrezRod"><img src={git} alt="GitHub" /> </a>
+                        <a className="main__icons" href="https://github.com/RoodrigoRoot/Carnitas-Bedu"><img src={git} alt="GitHub" /> </a>
                         <a className="main__icons" href="https://www.facebook.com/urcinoalvarez"><img src={face} alt="Facebook" /> </a>
                 </div>
 

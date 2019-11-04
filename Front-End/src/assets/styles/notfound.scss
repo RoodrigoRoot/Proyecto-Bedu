@@ -1,0 +1,36 @@
+.container__not{
+
+    display: flex;
+
+    .not__left{
+
+        background-color: white;
+        height: 100vh;
+        h3{
+            padding: 6%;
+            margin-left: 5.1rem;
+            a{
+                text-decoration: none;
+                color: #4267B2;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .not__right{
+        height: 100vh;
+        background-color: #FF1D5E;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .not__found{
+        margin-right: 8.7rem;
+        border: 1px solid transparent;
+        margin-left: 100px;
+    }
+
+}
+
