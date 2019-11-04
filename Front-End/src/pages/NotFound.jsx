@@ -8,7 +8,8 @@ return(
        <div className="not__left">
 
            <img src="https://media.giphy.com/media/l0Iych4GHWMRxci2I/giphy.gif" alt="dog-astronaut"/>
-           <h3>¿Y si de paso me agregas carnal? <a href="https://www.facebook.com/urcinoalvarez">Facebook</a></h3>
+           <h3>¿Y si de paso me agregas carnal? <a href="https://www.facebook.com/urcinoalvarez">¡Facebook!</a></h3>
+        
        </div>
        <div className="not__right">
         <p className="not__found"> <h1>404 <br/> Page Not Found </h1></p>
