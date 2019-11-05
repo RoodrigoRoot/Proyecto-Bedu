@@ -16,5 +16,5 @@ Dicha plataforma está hecha con ReactJS(Javascript) para el Front-End y Django(
 ## Front-End (RestJS-Javascript)
   ##### Solo ejecutar el comando npm install
 
-##Enlace al sitio
+## Enlace al sitio
 "ec2-18-223-112-211.us-east-2.compute.amazonaws.com"
