@@ -18,7 +18,7 @@ class CreateUsers(generics.ListCreateAPIView):
 class UserList(generics.RetrieveUpdateDestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticated,IsOwner)
 
 
 class CustomObtainAuthToken(ObtainAuthToken):

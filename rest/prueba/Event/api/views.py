@@ -13,12 +13,12 @@ from django.core.mail import send_mail
 class EventsAPIVIew(generics.ListCreateAPIView):
     queryset= Event.objects.all()
     serializer_class= EventSerializer
-    permission_classes=[IsAuthenticated]
+    permission_classes=[IsAuthenticated,IsOwner]
 
 class EventAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset= Event.objects.all()
     serializer_class= EventSerializer
-    permission_classes=[IsAuthenticated]
+    permission_classes=[IsAuthenticated,IsOwner]
 
 
 

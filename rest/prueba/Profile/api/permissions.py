@@ -11,7 +11,6 @@ class IsOwner(permissions.BasePermission):
 
     def has_permission(self, request, view):
         if request.method in CREATE_METHODS and request.data:
-            # raise NotAcceptable('Solo puedes crear tus propios eventos')
             return request.user.id == request.data['creator']
         return True
 
