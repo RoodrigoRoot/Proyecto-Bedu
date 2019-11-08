@@ -48,7 +48,7 @@ class FormE extends React.Component{
         
             alert("Evento Creado")
 
-            window.location.replace('http://ec2-52-14-42-222.us-east-2.compute.amazonaws.com/Eventos')
+            window.location.replace('http://ec2-18-220-54-155.us-east-2.compute.amazonaws.com/Eventos')
         }catch(error){
 
             console.log(error.message)
