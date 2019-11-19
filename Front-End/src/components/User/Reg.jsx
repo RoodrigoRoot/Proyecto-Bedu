@@ -81,14 +81,16 @@ class Register extends Component {
       <Fragment>
 
         <div className="register">
+
           <div className="register__img">
             <img src="https://image.freepik.com/foto-gratis/cena-bistec-platos-rusticos_23-2148167639.jpg" alt="Carne" />
           </div>
+
           <div className="register__form">
 
             <form onSubmit={this._onSubmit}  >
               <label>Nombre de Usuario</label><label>Contraseña</label><br />
-              <input name="username" type="text" placeholder="Nombre de usuario"
+              <input name="username" type="text" placeholder="Usuario"
                 value={username}
                 className="full__Name"
                 onChange={this.handleInputChange}
@@ -124,7 +126,7 @@ class Register extends Component {
               <br />
               <label>Email</label><label>Teléfono</label><br />
 
-              <input name="email" type="email" placeholder="Correo Electronico"
+              <input name="email" type="email" placeholder="Email"
                 value={email}
                 className="full__Name"
                 onChange={this.handleInputChange}

@@ -11,12 +11,126 @@ body{
         padding: 0;
         
     }
-    @keyframes anim{
-        0% {background-color: #ff0;} /*Amarillo*/
-       25% {background-color: #f80;} /*Naranja*/
-       50% {background-color: #000;} /*Negro*/
-       75% {background-color: #f80;} /*Otra vez naranja*/
-      100% {background-color: #ff0;} /*Otra vez amarillo*/
-    }
+
 
 }
+@media only screen and (max-width:480px) {
+/*Main*/
+#meet__logo{
+
+  .Link__h2{
+
+    font-size: 0px;
+  }
+
+  .Link__h2::after{
+    margin-left: 10px;
+    font-size: 30px;
+    content: "Asade";
+  }
+
+}
+
+nav{
+  #name h1{
+    display: none;
+  }
+
+
+
+}
+
+#hr{
+   width: 80%;
+  margin-left: 40px;
+}
+
+.main__social{
+  display: none;
+}
+
+.section{
+  height: 38.5rem;
+  h2{
+    font-size: 2rem;
+  }
+  
+}
+
+.section__container{
+  display:block;
+  article {
+    display: flex;
+    justify-content: center;
+    
+    #roast{
+      
+    width: 99%;
+    height: 10%;
+
+  }
+
+}
+
+.section__container__text{
+  width: 100%;
+  margin-top: -10px;
+  text-align: justify;
+  
+}
+}
+
+
+/*Login*/
+.img__login{
+  display: none;
+}
+#login__content{
+
+.login__center{
+  border:0px;
+  margin-left: 20px;
+}
+
+}
+
+
+/*Registro*/
+.register{
+
+  .register__img{
+    display: none;
+  }
+
+   .register__form{
+   
+   position: relative;
+   
+   left: 8%;
+
+   form::before{
+     content: "Registrar Usuario";
+   }
+
+   form{
+     width: 350px;
+   }
+
+    form > label{
+      display: none;
+           
+    }
+  
+
+
+  }
+
+}
+
+.register__form   input{
+  width:150px;
+}
+
+
+}
+

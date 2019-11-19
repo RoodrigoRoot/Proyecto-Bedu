@@ -1,3 +1,4 @@
+
 #Main__content{
         font-family: 'Lato', sans-serif;
         position: relative;
@@ -29,15 +30,3 @@
         }
 }
 
-@media only screen and (max-width:480px){
-        #Main__content{
-                #video{
-                   height: 200%;
-                }
-        }
-        footer{
-                position: absolute;
-                bottom: -70%;
-                
-            }
-}

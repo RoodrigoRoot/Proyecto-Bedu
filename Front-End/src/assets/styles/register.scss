@@ -28,20 +28,23 @@
         top: 50;
         right: 0;
         height: 80%;
-        width: 70%;
+        width: 80%;
+        
         justify-content: center;
         color: white;
         text-align: center;
         
         border-radius: 5px;
+        
         form{
-            border: 3px solid white;
+            border: 8px solid #222;
             width: 70%;
             height: 90%;
             border-radius: 10px;
             font-weight: bold;
            
         }
+
         .full__Name{
             width: 35%;
             margin-right: 40px;
@@ -79,14 +82,4 @@
         color: black;
     }
 
-}
-@media only screen and (max-width:480px){
-.register__img{
-    display: none;
-}
-    footer{
-        position: absolute;
-        bottom: -20%;
-        
-    }
 }
