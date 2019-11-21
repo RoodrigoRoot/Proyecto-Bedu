@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from 'react'
 import '../../assets/styles/register.scss'
+import imagen from '../../assets/media/roast.png'
 
 class Register extends Component {
   constructor(props) {
@@ -83,77 +84,85 @@ class Register extends Component {
         <div className="register">
 
           <div className="register__img">
-            <img src="https://image.freepik.com/foto-gratis/cena-bistec-platos-rusticos_23-2148167639.jpg" alt="Carne" />
+            <img className="img__reg" src={imagen} alt="Registro" />
           </div>
 
           <div className="register__form">
 
             <form onSubmit={this._onSubmit}  >
-              <label>Nombre de Usuario</label><label>Contraseña</label><br />
-              <input name="username" type="text" placeholder="Usuario"
-                value={username}
-                className="full__Name"
-                onChange={this.handleInputChange}
-                required
-              />
+              <h1>Registro de Usuario</h1>
+              <label>Usuario</label><label className="label__left">Contraseña</label><br />
+              <div className="form__flex">
+
+                <input name="username" type="text" placeholder="Usuario"
+                  value={username}
+
+                  onChange={this.handleInputChange}
+                  required
+                />
 
 
-              <input name="password" type="password" placeholder="Contraseña"
-                value={password}
-                className="full__Name"
-                onChange={this.handleInputChange}
-                required
-              />
+                <input name="password" type="password" placeholder="Contraseña"
+                  value={password}
+
+                  onChange={this.handleInputChange}
+                  required
+                />
+              </div>
               <br />
               <label>Nombre</label>
-              <label>Apellidos</label>
+              <label className="label__left">Apellidos</label>
               <br />
-              <input name="first_name" type="text" placeholder="Nombre"
-                className="full__Name"
-                value={first_name}
-                onChange={this.handleInputChange}
-                required
-              />
+              <div className="form__flex">
+                <input name="first_name" type="text" placeholder="Nombre"
 
-              <input name="last_name" type="text" placeholder="Apellidos"
-                value={last_name}
-                onChange={this.handleInputChange}
-                required
-                className="full__Name"
-              />
+                  value={first_name}
+                  onChange={this.handleInputChange}
+                  required
+                />
 
+                <input name="last_name" type="text" placeholder="Apellidos"
+                  value={last_name}
+                  onChange={this.handleInputChange}
+                  required
+
+                />
+              </div>
 
               <br />
-              <label>Email</label><label>Teléfono</label><br />
+              <label>Email</label><label className="label__left">Teléfono</label><br />
+              <div className="form__flex">
+                <input name="email" type="email" placeholder="Email"
+                  value={email}
 
-              <input name="email" type="email" placeholder="Email"
-                value={email}
-                className="full__Name"
-                onChange={this.handleInputChange}
-                required
+                  onChange={this.handleInputChange}
+                  required
 
-              />
+                />
 
-              <input name="phone" type="text" placeholder="Teléfono"
-                value={phone}
-                onChange={this.handleInputChangePro}
-                required
-                className="full__Name"
-              />
+                <input name="phone" type="text" placeholder="Teléfono"
+                  value={phone}
+                  onChange={this.handleInputChangePro}
+                  required
+
+                />
+              </div>
               <br />
               <label>Ubicación</label><br />
-              <input name="location" type="text" placeholder="Ubicación"
-                value={location}
-                onChange={this.handleInputChangePro}
-                required
-                className="full__Name"
-              />
+              <div className="form__flex">
+                <input name="location" type="text" placeholder="Ubicación"
+                  value={location}
+                  onChange={this.handleInputChangePro}
+                  required
+
+                />
 
 
-              <br />
-              <input className="full__Name" type="submit" value="Registrar"
-                id="btn"
-              />
+                <br />
+                <input className="full__Name" type="submit" value="Registrar"
+                  id="btn"
+                />
+              </div>
             </form>
           </div>
         </div>

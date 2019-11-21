@@ -1,5 +1,5 @@
 
-#Main__content{
+.Main__content{
         font-family: 'Lato', sans-serif;
         position: relative;
         display: inline-block;
@@ -10,7 +10,7 @@
         background-repeat: no-repeat;
         background-size: cover;
 
-        #video{ 
+        .video{ 
                 margin: 0;
                 padding: 0;
                 margin-left: 6px;

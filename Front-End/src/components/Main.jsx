@@ -5,8 +5,8 @@ import Social from './Ext/Social'
 const Main = () => {
     return (
         <main>
-            <div id="Main__content">
-                <video autoPlay="autoplay" id="video" loop>
+            <div className="Main__content">
+                <video autoPlay="autoplay" className="video" loop>
                     <source src={video} type="video/mp4" />
 
                 </video>

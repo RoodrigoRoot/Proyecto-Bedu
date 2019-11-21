@@ -16,7 +16,7 @@ body{
 }
 @media only screen and (max-width:480px) {
 /*Main*/
-#meet__logo{
+.meet__logo{
 
   .Link__h2{
 
@@ -32,7 +32,7 @@ body{
 }
 
 nav{
-  #name h1{
+  .name h1{
     display: none;
   }
 
@@ -85,7 +85,7 @@ nav{
 .img__login{
   display: none;
 }
-#login__content{
+.login__content{
 
 .login__center{
   border:0px;
@@ -97,40 +97,9 @@ nav{
 
 /*Registro*/
 .register{
-
   .register__img{
     display: none;
   }
-
-   .register__form{
-   
-   position: relative;
-   
-   left: 8%;
-
-   form::before{
-     content: "Registrar Usuario";
-   }
-
-   form{
-     width: 350px;
-   }
-
-    form > label{
-      display: none;
-           
-    }
-  
-
-
-  }
-
 }
-
-.register__form   input{
-  width:150px;
-}
-
-
 }
 

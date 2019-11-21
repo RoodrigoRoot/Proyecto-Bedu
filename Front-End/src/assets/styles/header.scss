@@ -13,7 +13,7 @@ nav{
     align-items: center;
     height: 3rem;
     
-    #name{
+    .name{
         animation-name:name;
         animation-duration: 2s;
         position: relative;
@@ -30,7 +30,7 @@ nav{
     100%{top: 0px;}
 }
 
-#meet__logo{
+.meet__logo{
     background-color: transparent;
     h2{
         animation-name: slash;
@@ -66,14 +66,14 @@ nav{
   }
 
 
-#meet__links{
+.meet__links{
     list-style-type: none;
     display: flex;
     
 
 }
 
-#meet__links a{
+.meet__links a{
     text-decoration: none;
     color: #CFA92C;
     animation-name: sing;
@@ -92,7 +92,7 @@ nav{
     
     100% {top: 0px; left: 0px;}
   }
-#meet__links a:hover{
+.meet__links a:hover{
     
     color: #F2F5A9;
     padding-bottom: 15px;

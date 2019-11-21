@@ -46,7 +46,7 @@ class Login extends Component {
         return (
             <Fragment>
 
-                <div id="login__content">
+                <div className="login__content">
                     <img className="img__login" src="https://i2.wp.com/thehappening.com/wp-content/uploads/2017/06/portada-55.jpg?fit=1024%2C694&ssl=1" alt="Login" />
 
                     <div className="login__center">
