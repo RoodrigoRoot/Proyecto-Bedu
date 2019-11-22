@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../assets/styles/ListEvent.scss'
 import axios from 'axios'
-
+import DetailBtn from './DetailBtn'
 
 class ListEvent extends React.Component{
     
@@ -76,6 +76,7 @@ render(){
                     <span><h3>Referencias</h3>{this.state.references}</span> <br/> <br/>
                     <span>Fecha: {this.state.date}</span>
                 </div>
+                  <DetailBtn/>
             </div>
 
         </div>

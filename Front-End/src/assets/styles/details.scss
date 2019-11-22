@@ -1,0 +1,59 @@
+.container__event{
+    width: 70%;
+    height: 60vh;
+    background-color: white;
+    position: relative;
+    left: 15%;   
+    margin-bottom: 8rem;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    background-color: #222;
+    color:white;
+
+    .event__title{
+        font-size: 25px;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .event__details{
+        display: flex;
+        text-align: justify;
+        justify-content: space-around;
+        
+    }
+    .event__place{
+        padding: 10px;
+        width: 50%;
+        
+        
+        
+    }
+
+    .event__references{
+        
+        width: 50%;
+        padding: 10px;
+        text-align: justify;
+        
+    }
+    .event__date{
+        position: relative;
+        top: 10%;
+        .ul__date{
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            li{
+                list-style: none;
+                margin-right: 25%;
+            }
+        }
+    }
+
+    .event__h2{
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+}
