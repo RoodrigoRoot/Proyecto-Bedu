@@ -17,7 +17,7 @@ class Login extends Component {
         const { username, password } = this.state
         try {
 
-            let request = await axios.post('http://ec2-13-58-232-56.us-east-2.compute.amazonaws.com/api/v2/login/ ', {
+            let request = await axios.post('http://localhost:8000/api/v2/login/ ', {
                 username,
                 password
             })
@@ -25,7 +25,7 @@ class Login extends Component {
             const { data } = request
             localStorage.setItem('token', data.token)
             localStorage.setItem('user_id', data.id)
-            window.location.replace('http://ec2-18-220-54-155.us-east-2.compute.amazonaws.com')
+            window.location.replace('http://localhost:3000/')
 
 
         } catch (error) {
