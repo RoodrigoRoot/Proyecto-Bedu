@@ -8,7 +8,7 @@ class ListEvent extends React.Component{
 constructor(props) {
     super(props)
     this.state= {
-        name_event:"",
+        name_event:"Por el momento no tienes eventos registrados",
         street:"",
         col:"",
         cp:"",
@@ -63,7 +63,7 @@ render(){
     return(
         <div className="event__list">
             
-            <h2 className="event_title">Tus Eventos</h2>
+            <h2>Tus Eventos</h2>
             <div className="event__card">
                 <h4  className="event__h">Evento: {this.state.name_event}</h4>
                 

@@ -20,14 +20,14 @@
         display: flex;
         text-align: justify;
         justify-content: space-around;
+        margin-left: 5rem;
         
     }
+
     .event__place{
         padding: 10px;
         width: 50%;
-        
-        
-        
+   
     }
 
     .event__references{
@@ -37,16 +37,32 @@
         text-align: justify;
         
     }
+
     .event__date{
+
+        h2{
+            margin-left:-100px;
+        }
+
+        h3{
+            margin-left:-100px;
+        }
+
         position: relative;
-        top: 10%;
+        top: 5%;
+        left: 5%;
+        
         .ul__date{
-            margin-top: 50px;
+            margin-top: 30px;
             display: flex;
             justify-content: center;
+            
             li{
                 list-style: none;
                 margin-right: 25%;
+                font-family: 'Lato', sans-serif;
+                font-size: 20px;
+
             }
         }
     }
@@ -56,4 +72,5 @@
         margin: 0;
         padding: 0;
     }
+
 }

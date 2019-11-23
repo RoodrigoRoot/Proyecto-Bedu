@@ -1,6 +1,6 @@
 .user__content{
     padding: 10%;
-    border: 1px solid #222;
+    
     
     border-radius: 10px;
     .user__form{
@@ -19,7 +19,7 @@
             margin-right: 150px;
             border-radius: 5px;
             width: 20%;
-            padding: 1.5%;
+            
             
         }
         label, input{
@@ -29,7 +29,7 @@
         background-color: #222;
         border-radius: 5px;
         #btn__user{
-            width: 80%;
+            width: 50%;
             cursor: pointer;
             border: none;
             font-size: 24px;

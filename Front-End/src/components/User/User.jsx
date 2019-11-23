@@ -49,7 +49,7 @@ class User extends React.Component {
                 password: this.state.password
 
             }
-
+                
              await fetch(`http://localhost:8000/api/usuarios/${localStorage.getItem('user_id')}`, {
                 headers: {
                     "Content-Type": "application/json",
@@ -58,8 +58,9 @@ class User extends React.Component {
                 body: JSON.stringify(input),
                 method: 'PUT',
             })
+            
 
-
+            alert('Datos Actualizados')
 
         } catch (error) {
 
@@ -77,7 +78,7 @@ class User extends React.Component {
 
             })
             let { data } = request
-            console.log(data)
+            
             this.setState({
                 username: data.username,
                 email: data.email,
@@ -92,6 +93,7 @@ class User extends React.Component {
 
 
             })
+            
 
         } catch (error) {
             console.log(error)

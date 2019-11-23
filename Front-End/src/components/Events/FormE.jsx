@@ -18,6 +18,9 @@ class FormE extends React.Component{
             email7:"",
             cp:"",
             references:"",
+            day1:"",
+            day2:"",
+            day3:"",
             date:"",
             hour:""
 
@@ -48,7 +51,7 @@ class FormE extends React.Component{
         
             alert("Evento Creado")
 
-            window.location.replace('http://ec2-18-220-54-155.us-east-2.compute.amazonaws.com/Eventos')
+            window.location.replace('http://localhost:3000/Eventos')
         }catch(error){
 
             console.log(error.message)
@@ -176,19 +179,52 @@ class FormE extends React.Component{
                         onChange={this.handleChange}
                         required
                         />
-                
+                <h4>Selecciona 3 fechas en las que puede ser el evento</h4>
+                <div class="tooltip">
                         <input type="date"
-                        value={this.state.date}
+                        value={this.state.day1}
                         onChange={this.handleChange}
-                        name="date"
+                        name="day1"
                         required
+                        
                         />
+                     
+    <span class="tooltiptext">Fecha tentativa</span>
+</div>
+
+
+<div class="tooltip">
+                        <input type="date"
+                        value={this.state.day2}
+                        onChange={this.handleChange}
+                        name="day2"
+                        required
+                        
+                        />
+                     
+    <span class="tooltiptext">Fecha tentativa</span>
+</div>
+
+
+
+                        <div class="tooltip">
+                        <input type="date"
+                        value={this.state.day3}
+                        onChange={this.handleChange}
+                        name="day3"
+                        required
+                        
+                        />
+                     
+    <span class="tooltiptext">Fecha tentativa</span>
+</div>
                         
                         <input type="time"
                         value={this.state.hour}
                         onChange={this.handleChange}
                         name="hour"
                         required
+                        placeholder="Hora"
                         />
                        
                     <input id="send" type="submit" value="C r e a r"/>

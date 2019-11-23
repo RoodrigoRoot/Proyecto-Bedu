@@ -1,12 +1,13 @@
 .btn__detail{
-    margin-left: 30rem;
+    margin-left: 25rem;
     text-decoration: none;
     padding: 10px;
     color: white;
-    border: 1px solid #222;
-    background-color: #222;
+    
+    background-color: rgb(189, 33, 163);
     border-radius: 10px;
     }
 .btn__detail:hover{
-    
+    color: #222;
+    background-color: #ff0;
 }

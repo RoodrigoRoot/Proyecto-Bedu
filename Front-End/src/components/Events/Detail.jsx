@@ -11,8 +11,11 @@ constructor(props) {
         street:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         col:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         cp:"44520",
-        references:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pretium erat et tellus vulputate, eu pretium nulla dapibus. Morbi rutrum aliquet nisi, vel dignissim velit ultricies vitae. Vestibulum tellus metus, euismod vel arcu at, molestie congue enim. Vestibulum eu efficitur massa. Nunc et vehicula lectus, nec eleifend quam.  ",
-        date:"1",
+        references:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pretium erat et tellus vulputate, eu pretium nulla dapibus. Morbi rutrum aliquet nisi, vel dignissim velit ultricies vitae.  ",
+        day1:"1",
+        day2:"",
+        day3:"",
+        hour:""
 
     }
     this.getEvent()
@@ -40,13 +43,16 @@ async getEvent(){
                     col:item.col,
                     cp:item.cp,
                     references:item.references,
-                    date:item.date
+                    day1:item.day1,
+                    day2:item.day2,
+                    day3:item.day3,
+                    hour:item.hour
     
                 })
             ))
     
         }else{
-            console.log("No tienes eventos")
+            alert("Carnal, no tienes eventos. Create uno e invitemos a todos los que puedas")
         }
 
     
@@ -81,12 +87,13 @@ render(){
                    </div>
                    
                 </div>
-                <div className="event__date"><h2 className="event__h2">Fechas</h2>
+                <div className="event__date"><h2 className="event__h2">Fechas Tentativas</h2>
+                <h3>Hora: {this.state.hour}</h3>
                 <div>
                     <ul className="ul__date">
-                        <li>Fecha 1:</li>
-                        <li>Fecha 2:</li>
-                        <li>Fecha 3:</li>
+                        <li>Fecha 1: {this.state.day1}</li>
+                        <li>Fecha 2: {this.state.day2}</li>
+                        <li>Fecha 3: {this.state.day3}</li>
                     </ul>
                 </div>
                 </div>
