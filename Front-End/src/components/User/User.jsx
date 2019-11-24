@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import axios from 'axios'
 import '../../assets/styles/user.scss'
-import imguser from '../../assets/media/user.jpg'
+
 class User extends React.Component {
 
     constructor(props) {
