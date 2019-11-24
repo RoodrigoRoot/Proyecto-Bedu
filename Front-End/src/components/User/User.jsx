@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import axios from 'axios'
 import '../../assets/styles/user.scss'
-
+import imguser from '../../assets/media/user.jpg'
 class User extends React.Component {
 
     constructor(props) {
@@ -16,7 +16,7 @@ class User extends React.Component {
 
         }
         this._getUser()
-        alert("Al momento de actualizar tus datos personales, por favor introduce tu contraseña o si deseas actualizarla ")
+        //alert("Al momento de actualizar tus datos personales, por favor introduce tu contraseña o si deseas actualizarla ")
     }
 
     handleInputChange = (event) => {
@@ -107,69 +107,78 @@ class User extends React.Component {
         return (
             <Fragment>
                 <div className="user__content">
+                    <div className="side__left">
+                        <h2 className="left__username">Perfil de {this.state.username.charAt(0).toUpperCase() + username.slice(1) }</h2>
+                        <img className="img__user" src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" alt="user"/>
+                    </div>
+
+
                     <div className="user__form">
                         <form onSubmit={this._onSubmit}  >
 
-                            <label>Usuario</label><label>Contraseña</label><br />
-                            <input readOnly name="username" type="text" placeholder="Nombre de usuario"
-                                value={username}
-
-                                onChange={this.handleInputChange}
-                                required
-                            />
-
-
-                            <input name="password" type="password" placeholder="Vieja o Nueva"
-                                value={password}
-
-                                onChange={this.handleInputChange}
-                                required
-                            />
-                            <br />
-                            <label>Nombre</label>
-                            <label>Apellidos</label>
-                            <br />
-                            <input name="first_name" type="text" placeholder="Nombre"
-
-                                value={first_name}
-                                onChange={this.handleInputChange}
-                                required
-                            />
-
-                            <input name="last_name" type="text" placeholder="Apellidos"
-                                value={last_name}
-                                onChange={this.handleInputChange}
-                                required
-
-                            />
-
-
-                            <br />
-                            <label>Email</label><label>Teléfono</label><br />
-
-                            <input name="email" type="email" placeholder="Correo Electronico"
-                                value={email}
-
-                                onChange={this.handleInputChange}
-                                required
-
-                            />
-
-                            <input name="phone" type="text" placeholder="Teléfono"
-                                value={phone}
-                                onChange={this.handleInputChangePro}
-                                required
-
-                            />
-                            <br />
-                            <label>Ubicación</label><br />
-                            <input name="location" type="text" placeholder="Ubicación"
-                                value={location}
-                                onChange={this.handleInputChangePro}
-                                required
-
-                            />
-
+                            <div className="username__pass"><label>Usuario</label><label>Contraseña</label></div>
+                            <div className="form__input">
+                            
+                                <input readOnly name="username" type="text" placeholder="Nombre de usuario"
+                                    value={username}
+                                
+                                    onChange={this.handleInputChange}
+                                    required
+                                />
+                                
+                                
+                                <input name="password" type="password" placeholder="Vieja o Nueva"
+                                    value={password}
+                                
+                                    onChange={this.handleInputChange}
+                                    required
+                                />
+                            </div>
+                            
+                    <div className="form__block">
+                    <label>Nombre(s)</label>
+                                <input name="first_name" type="text" placeholder="Nombre"
+                        
+                                    value={first_name}
+                                    onChange={this.handleInputChange}
+                                    required
+                                />
+                        
+                        <label>Apellidos</label><input name="last_name" type="text" placeholder="Apellidos"
+                                    value={last_name}
+                                    onChange={this.handleInputChange}
+                                    required
+                        
+                                />
+                        
+                        
+                                
+                                <label>Email</label>
+                        
+                                <input name="email" type="email" placeholder="Correo Electronico"
+                                    value={email}
+                        
+                                    onChange={this.handleInputChange}
+                                    required
+                        
+                                />
+                        <label>Teléfono</label>
+                                <input name="phone" type="text" placeholder="Teléfono"
+                                    value={phone}
+                                    onChange={this.handleInputChangePro}
+                                    required
+                        
+                                />
+                               
+                                <label>Ubicación</label>
+                                <input name="location" type="text" placeholder="Ubicación"
+                                    value={location}
+                                    onChange={this.handleInputChangePro}
+                                    required
+                        
+                                />
+                        
+                    </div>
 
                             <br />
                             <input type="submit" value="Actualizar Datos"

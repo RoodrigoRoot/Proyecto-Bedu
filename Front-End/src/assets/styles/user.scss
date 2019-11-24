@@ -1,43 +1,94 @@
+$fontSize:16px;
+
 .user__content{
-    padding: 10%;
+    padding: 8%;
+    display: flex;
+.side__left{
+.left__username{
+    margin: 0;
+    padding: 0;
+    margin-top: -80px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+    .img__user{
+        position: relative;
+        height: 250px;
+        width: 250px;
+        
+        border-radius: 50%;
+        margin-right: 12rem;        
+    }
+}
     
     
-    border-radius: 10px;
     .user__form{
         margin-top: -80px;
-        height: 300px;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-        label{
-            margin-right: 50%;
+        .username__pass{
+            display: flex;
+            justify-content: space-around;
             color: white;
+            font-size: $fontSize*1.1;
         }
-        input{
-            text-align: center;
-            margin-right: 150px;
-            border-radius: 5px;
-            width: 20%;
+        .form__input{
+        display: flex;
+        justify-content: space-around;
+            margin-right: 65px;
+            input{
+                
+                background-color: white;
+                border-radius: 5px;
+                height: 25px;
+                margin: 10px;
+                width: 280px;
+                color: black;
+                font-size: $fontSize;
+                font-family: inherit;
+                text-align: center;
+            }
             
+        }
+
+        .form__block{
+
+            display: inline-block;
+
+            label{
+                display: inline-block;
+                width: 80px;
+                color: white;
+                font-size: $fontSize*1.1;
+            }
+            
+            input{
+                margin: 10px;
+                color: black;
+                font-size: $fontSize;
+                font-family: inherit;
+                display: inline-block;
+                width: 85%;
+            }
             
         }
-        label, input{
-            margin-top: 10px;
-            font-size: 18px;
-        }
-        background-color: #222;
-        border-radius: 5px;
+
         #btn__user{
-            width: 50%;
-            cursor: pointer;
+            width: auto;
+            padding: 8px;
+            font-size: $fontSize;
             border: none;
-            font-size: 24px;
-            border-radius: 10px;
+            border-radius: 5px;
+            height: 35px;
+            margin-left: 10px;
+            cursor: pointer;
+            background-color: rgb(212, 87, 14);
+            color: white;
+            
         }
         #btn__user:hover{
-            background-color: #CFA92C;
-            color: white;
+
+
         }
+
     }
 }

@@ -8,7 +8,18 @@
     margin-bottom: 60px;
     margin-left: 5px;
     font-family: 'Prociono', serif;
+    animation-name: anim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
     
+    @keyframes anim{
+        0% {background-color: #f80;} /*Naranja*/
+       25% {background-color: #000;} /*Negro*/
+       50% {background-color: #ff0;} /*Amarillo*/
+       75% {background-color: #f85032;} /*Otra vez naranja*/
+      100% {background-color: #e73827;} /*Otra vez amarillo*/
+    }
+
     .event_title{
         
         font-size: 20px;

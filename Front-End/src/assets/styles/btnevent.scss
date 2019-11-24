@@ -9,7 +9,7 @@
         img{
 
             width: 49%;
-            height: 71.5%;
+            height: 74%;
             position: absolute;
             border-radius: 5px;
             margin-right: 5px;
@@ -17,12 +17,17 @@
     }
     
     .btn{
+        
         padding: 30%;
         .btn__link{
+            background-color: #ff0;
+            animation-name: anim;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
             #link{
                 text-decoration: none;
                 font-size: 24px;
-                color: white;
+                color: #000;
                 
             }
             #link:hover{

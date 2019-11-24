@@ -46,7 +46,8 @@ async getEvent(){
                     day1:item.day1,
                     day2:item.day2,
                     day3:item.day3,
-                    hour:item.hour
+                    hour:item.hour,
+                    date:item.date
     
                 })
             ))
@@ -95,6 +96,7 @@ render(){
                         <li>Fecha 2: {this.state.day2}</li>
                         <li>Fecha 3: {this.state.day3}</li>
                     </ul>
+                    <h3>Fecha Final: {this.state.date}</h3>
                 </div>
                 </div>
             </div>

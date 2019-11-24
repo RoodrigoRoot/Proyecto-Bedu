@@ -1,11 +1,15 @@
 .container__not{
 
     display: flex;
-
+    margin-left: 1rem;
     .not__left{
-
+        img{
+            border-radius: 3%;
+        }
         background-color: white;
         height: 100vh;
+        text-align: center;
+        border-radius: 100%;
         h3{
             padding: 6%;
             margin-left: 5.1rem;
@@ -19,6 +23,7 @@
 
     .not__right{
         height: 100vh;
+
         background-color: #FF1D5E;
         color: white;
         font-family: 'Montserrat', sans-serif;
@@ -27,7 +32,7 @@
     }
 
     .not__found{
-        margin-right: 15rem;
+        margin-right: 20rem;
         border: 1px solid transparent;
         margin-left: 100px;
     }

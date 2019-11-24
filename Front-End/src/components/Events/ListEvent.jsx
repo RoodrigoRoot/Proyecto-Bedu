@@ -74,9 +74,11 @@ render(){
                     </h3>
                     <span>Calle: {this.state.street}<br/> Colonia:    {this.state.col}<br/> Código Postal: {this.state.cp}</span><br/> 
                     <span><h3>Referencias</h3>{this.state.references}</span> <br/> <br/>
+                    <DetailBtn/>
                     <span>Fecha: {this.state.date}</span>
+                    
                 </div>
-                  <DetailBtn/>
+                  
             </div>
 
         </div>

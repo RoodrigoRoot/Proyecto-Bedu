@@ -1,12 +1,16 @@
 .btn__detail{
-    margin-left: 25rem;
+    margin-left:350px;
+    margin-top: -450px;    
     text-decoration: none;
     padding: 10px;
+    font-size: 15px;
     color: white;
-    
-    background-color: rgb(189, 33, 163);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f85032;
     border-radius: 10px;
-    }
+        
+
+}
 .btn__detail:hover{
     color: #222;
     background-color: #ff0;

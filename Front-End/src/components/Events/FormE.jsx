@@ -15,27 +15,41 @@ class FormE extends React.Component{
             email4:"",
             email5:"",
             email6:"",
-            email7:"",
             cp:"",
             references:"",
             day1:"",
             day2:"",
             day3:"",
-            date:"",
+            date:"2019-01-01",
             hour:""
 
         }
     }
 
     _onSubmit= async (e)=>{
-        const {name_event,creator,street,col,cp,references,date,email1,email2,email3,email4,email5,email6,hour} = this.state
         
         const input= {
-            name_event,creator,street,col,cp,references,date,email1,email2,email3,email4,email5,email6,hour}
+            name_event:this.state.name_event,
+            creator:this.state.creator,
+            street:this.state.street,
+            col:this.state.col,
+            cp:this.state.cp,
+            references:this.state.references,
+            date:this.state.date,
+            email1:this.state.email1,
+            email2:this.state.email2,
+            email3:this.state.email3,
+            email4:this.state.email4,
+            email5:this.state.email5,
+            email6:this.state.email6,
+            day1:this.state.day1,
+            day2:this.state.day2,
+            day3:this.state.day3,
+            hour:this.state.hour}
         
         e.preventDefault()
         try{
-            console.log(name_event,creator,street,col,cp,references,date,email1,email2,email3,email4,email5,email6)
+            console.log(input)
             await fetch('http://localhost:8000/api/eventos/',{
             body: JSON.stringify(input),
             method: 'POST',
@@ -48,7 +62,25 @@ class FormE extends React.Component{
             })
             
             
-        
+        /*
+            "name_event": "asdasdasd",
+    "creator": 2,
+    "email1": "1@gmail.com",
+    "email2": "2@gmail.com",
+    "email3": "2@gmail.com",
+    "email4": "",
+    "email5": "",
+    "email6": "",
+    "street": "Chapultepec",
+    "col": "jardines del bosque",
+    "cp": "44520",
+    "references": "sdafadsfaf",
+    "day1": "2019-11-24",
+    "day2": "2019-11-24",
+    "day3": "2019-11-24",
+    "date": "2019-11-24",
+    "hour": "01:38:15"
+        */ 
             alert("Evento Creado")
 
             window.location.replace('http://localhost:3000/Eventos')
@@ -180,7 +212,7 @@ class FormE extends React.Component{
                         required
                         />
                 <h4>Selecciona 3 fechas en las que puede ser el evento</h4>
-                <div class="tooltip">
+                <div className="tooltip">
                         <input type="date"
                         value={this.state.day1}
                         onChange={this.handleChange}
@@ -189,11 +221,11 @@ class FormE extends React.Component{
                         
                         />
                      
-    <span class="tooltiptext">Fecha tentativa</span>
+    <span className="tooltiptext">Fecha tentativa</span>
 </div>
 
 
-<div class="tooltip">
+<div className="tooltip">
                         <input type="date"
                         value={this.state.day2}
                         onChange={this.handleChange}
@@ -202,12 +234,12 @@ class FormE extends React.Component{
                         
                         />
                      
-    <span class="tooltiptext">Fecha tentativa</span>
+    <span className="tooltiptext">Fecha tentativa</span>
 </div>
 
 
 
-                        <div class="tooltip">
+                        <div className="tooltip">
                         <input type="date"
                         value={this.state.day3}
                         onChange={this.handleChange}
@@ -216,9 +248,9 @@ class FormE extends React.Component{
                         
                         />
                      
-    <span class="tooltiptext">Fecha tentativa</span>
+    <span className="tooltiptext">Fecha tentativa</span>
 </div>
-                        
+                        <h4>Hora del evento</h4>
                         <input type="time"
                         value={this.state.hour}
                         onChange={this.handleChange}
