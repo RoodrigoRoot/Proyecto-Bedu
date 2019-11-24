@@ -11,12 +11,24 @@ from django.core.mail import send_mail
 
 ####Event@@@@@@@@@@@   
 class EventsAPIVIew(generics.ListCreateAPIView):
-    queryset= Event.objects.all()
+    
+    def get_queryset(self):
+        user = self.request.user           
+        return Event.objects.filter(creator=user.pk)
+    
     serializer_class= EventSerializer
     permission_classes=[IsAuthenticated,IsOwner]
 
 class EventAPIView(generics.RetrieveUpdateDestroyAPIView):
-    queryset= Event.objects.all()
+    
+    @property
+    def event_pk(self):
+        return self.kwargs['pk']
+    
+    def get_queryset(self):
+        print(self.event_pk)
+        return Event.objects.filter(id=int(self.event_pk))
+    
     serializer_class= EventSerializer
     permission_classes=[IsAuthenticated,IsOwner]
 
@@ -25,29 +37,4 @@ class EventAPIView(generics.RetrieveUpdateDestroyAPIView):
 ####/Event@@@@@@@@@@@   
 
 ####Attendance@@@@@@@@@@@   
-class AttendancesAPIVIew(generics.ListCreateAPIView):
-    queryset= Attendance.objects.all()
-    serializer_class= AttendanceSerializer
-    permission_classes=()
-
-class AttendanceAPIVIew(generics.RetrieveUpdateDestroyAPIView):
-    queryset= Attendance.objects.all()
-    serializer_class= AttendanceSerializer
-    permission_classes=()
-####/Attendance@@@@@@@@@@@   
- 
- 
-####Productos@@@@@@@@@@@   
-    
-class ProductsAPIVIew(generics.ListCreateAPIView):
-    queryset= Product.objects.all()
-    serializer_class= ProdcutSerializer
-    permission_classes=()
-
-class ProductAPIVIew(generics.RetrieveUpdateDestroyAPIView):
-    queryset= Product.objects.all()
-    serializer_class= ProdcutSerializer
-    permission_classes=()
-
-####/Productos@@@@@@@@@@@
     

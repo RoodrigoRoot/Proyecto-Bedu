@@ -6,7 +6,7 @@ class EventSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Event
-        fields = ("id","name_event","creator","email1","email2","email3","email4","email5","email6","street","col","cp","references","date","hour")
+        fields = ("id","name_event","creator","email1","email2","email3","email4","email5","email6","street","col","cp","references","day1","day2","day3","date","hour")
         
     def create(self,validated_data):
         event = Event.objects.create(
@@ -23,6 +23,9 @@ class EventSerializer(serializers.ModelSerializer):
             col = validated_data['col'],
             cp = validated_data['cp'],
             references = validated_data['references'],
+            day1 = validated_data['day1'],
+            day2 = validated_data['day2'],
+            day3 = validated_data['day3'],
             date = validated_data['date'],
        
         )
@@ -42,13 +45,3 @@ class EventSerializer(serializers.ModelSerializer):
 
  
 
-class AttendanceSerializer(serializers.ModelSerializer):
-    class Meta:
-        model= Attendance
-        fields = "__all__"
-
-
-class ProdcutSerializer(serializers.ModelSerializer):
-    class Meta:
-        model= Product
-        fields = "__all__"

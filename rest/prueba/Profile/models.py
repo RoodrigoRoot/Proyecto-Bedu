@@ -5,10 +5,10 @@ from django.core.mail import send_mail
 class Profile(models.Model):
 
     locations_MX = [
-    ('GDL', 'Guadalajara'),
-    ('ZAP', 'Zapopan'),
-    ('TL', 'Tlaquepaque'),
-    ('TLA', 'Tlajomulco'),
+    ('Guadalajara', 'Guadalajara'),
+    ('Guadalajara', 'Zapopan'),
+    ('Guadalajara', 'Tlaquepaque'),
+    ('Guadalajara', 'Tlajomulco'),
     ]
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)

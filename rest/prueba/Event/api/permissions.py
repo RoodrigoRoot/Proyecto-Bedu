@@ -17,7 +17,7 @@ class IsOwner(permissions.BasePermission):
 
     def has_object_permission(self,request,view,obj):
         if request.method in UPDATE_METHODS + DELETE_METHODS:
-            return int(request.user.username)  == int(obj.creator)
+            return request.user.username  == obj.creator
             
         return True
     
