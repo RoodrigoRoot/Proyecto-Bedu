@@ -1,12 +1,18 @@
+##django
 from django.shortcuts import render
 from rest_framework import generics
+from django.core.mail import send_mail
+
+##Locals
 from ..models import *
 from .serializers import *
+from .permissions import *
+##DjangoRest
 from rest_framework.permissions import IsAdminUser, IsAuthenticated,AllowAny
 from rest_framework import status
-#from rest_framework.response import Response
-from .permissions import *
-from django.core.mail import send_mail
+from rest_framework.response import Response
+
+
 # Create your views here.
 
 ####Event@@@@@@@@@@@   
@@ -26,15 +32,44 @@ class EventAPIView(generics.RetrieveUpdateDestroyAPIView):
         return self.kwargs['pk']
     
     def get_queryset(self):
-        print(self.event_pk)
         return Event.objects.filter(id=int(self.event_pk))
     
     serializer_class= EventSerializer
     permission_classes=[IsAuthenticated,IsOwner]
 
 
+####Vote####
 
-####/Event@@@@@@@@@@@   
+class VoteApisView(generics.ListCreateAPIView):    
 
-####Attendance@@@@@@@@@@@   
+    @property
+    def event_pk(self):
+        return self.kwargs['pk']
+    
+    def get_queryset(self):
+            return DayEvent.objects.filter(event=self.event_pk)  
+    
+    permission_classes=[IsAuthenticated]
+    serializer_class = VoteSerializer
+
+    def post(self, request, *args, **kwargs):
+        return self.create(request, *args, **kwargs)
+    
+
+
+
+class ResultAPIView(generics.ListCreateAPIView):
+    queryset=Results.objects.all()
+    serializer_class=ResultsSerializer
+    permission_classes=[AllowAny]
+    @property
+    def event_pk(self):
+        return self.kwargs['pk']
+    def create(self,request,*args,**kwargs):
+        day1=DayEvent.objects.filter( event=self.event_pk, vote=1).count()
+        day2=DayEvent.objects.filter( event=self.event_pk, vote=2).count()
+        day2=DayEvent.objects.filter( event=self.event_pk, vote=3).count()
+        
+        
+    
     

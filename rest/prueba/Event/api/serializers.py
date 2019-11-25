@@ -42,6 +42,22 @@ class EventSerializer(serializers.ModelSerializer):
         return event
        
 
+class VoteSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model=DayEvent
+        fields="__all__"
+
+        
+
+
+class ResultsSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model=Results
+        fields="__all__"
+    
+
 
  
 

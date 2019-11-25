@@ -18,18 +18,11 @@ class Profile(models.Model):
     
     
     class Meta:
-        verbose_name = "Perfile"
+        verbose_name_plural = "Perfiles"
         
     def __str__(self):
        
        return self.user.username
    
-class Email(models.Model):
-    INVITATION="Un amigo esta planeando una carnita asada, te apuntas?"
-    
-    email = models.EmailField(("Email"),blank=False) 
-    body = models.TextField(("Cuerpo"),default=INVITATION)   
-    
-    def __str__(self):
-        return self.email
+
         
