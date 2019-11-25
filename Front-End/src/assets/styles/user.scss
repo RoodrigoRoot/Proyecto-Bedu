@@ -25,23 +25,28 @@ $fontSize:16px;
     
     .user__form{
         margin-top: -80px;
+        
         .username__pass{
+            margin-left: 50px;
+            width: 50%;
             display: flex;
             justify-content: space-around;
             color: white;
             font-size: $fontSize*1.1;
         }
         .form__input{
+            margin-left: 50px;
         display: flex;
         justify-content: space-around;
             margin-right: 65px;
+            width: 50%;
             input{
                 
                 background-color: white;
                 border-radius: 5px;
                 height: 25px;
                 margin: 10px;
-                width: 280px;
+                width: 200px;
                 color: black;
                 font-size: $fontSize;
                 font-family: inherit;
@@ -53,7 +58,7 @@ $fontSize:16px;
         .form__block{
 
             display: inline-block;
-
+            width: 60%;
             label{
                 display: inline-block;
                 width: 80px;
@@ -62,12 +67,13 @@ $fontSize:16px;
             }
             
             input{
+                
                 margin: 10px;
                 color: black;
                 font-size: $fontSize;
                 font-family: inherit;
                 display: inline-block;
-                width: 85%;
+                width: 80%;
                 border: none;
                 border-radius: 5px;
             }
