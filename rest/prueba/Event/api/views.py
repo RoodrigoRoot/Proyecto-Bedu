@@ -51,10 +51,41 @@ class VoteApisView(generics.ListCreateAPIView):
     
     permission_classes=[IsAuthenticated]
     serializer_class = VoteSerializer
-
-    def post(self, request, *args, **kwargs):
-        return self.create(request, *args, **kwargs)
     
+    
+    def max_number(self):
+        
+        day1=DayEvent.objects.filter( event=self.event_pk, vote=1).count(),
+        day2=DayEvent.objects.filter( event=self.event_pk, vote=2).count(),
+        day3=DayEvent.objects.filter( event=self.event_pk, vote=3).count(),
+        if day1 > day2 and day1 > day3:
+            return '2019-01-01'
+        elif day2 > day1 and day2 > day3:
+            return '2019-02-02'
+        else:
+            return '2019-03-03'
+        
+        
+    def create(self,request,*args,**kwargs):
+        e=Event.objects.get(id=self.event_pk),
+        
+        dayevent=DayEvent.objects.create(
+            user=request.POST['user'],
+            event=Event(request.POST['event']),
+            vote=request.POST['vote'],
+        )
+        if(Results.objects.filter(event=self.event_pk)):
+            print(self.max_number())
+            Results.objects.filter(event=self.event_pk).update(final_date=self.max_number())
+            return Response("exito")
+        else:
+            Results.objects.create(
+            event=Event(request.POST['event']),
+            final_date=self.max_number()
+        )
+            return Response("exito")
+        return Response("exito")
+        
 
 
 
@@ -62,14 +93,28 @@ class ResultAPIView(generics.ListCreateAPIView):
     queryset=Results.objects.all()
     serializer_class=ResultsSerializer
     permission_classes=[AllowAny]
+    
     @property
     def event_pk(self):
         return self.kwargs['pk']
+    
+    def max_number(self, day1, day2, day3):
+        if day1 > day2 and day1 > day3:
+            return day1
+        elif day2 > day1 and day2 > day3:
+            return day2
+        else:
+            return day3
+        
+    
     def create(self,request,*args,**kwargs):
         day1=DayEvent.objects.filter( event=self.event_pk, vote=1).count()
         day2=DayEvent.objects.filter( event=self.event_pk, vote=2).count()
-        day2=DayEvent.objects.filter( event=self.event_pk, vote=3).count()
+        day3=DayEvent.objects.filter( event=self.event_pk, vote=3).count()
         
-        
+        event = self.event_pk
+        final_date = max_number(day1,day2,day3)
+        Results.objects.create(event,final_date)
+        return Results
     
     

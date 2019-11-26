@@ -41,21 +41,30 @@ class EventSerializer(serializers.ModelSerializer):
         )
         return event
        
-
-class VoteSerializer(serializers.ModelSerializer):
-    
-    class Meta:
-        model=DayEvent
-        fields="__all__"
-
-        
-
-
 class ResultsSerializer(serializers.ModelSerializer):
     
     class Meta:
         model=Results
         fields="__all__"
+        
+class VoteSerializer(serializers.ModelSerializer):
+    #result = ResultsSerializer()
+    class Meta:
+        model=DayEvent
+        fields=('user', 'event', 'vote')
+
+    def create(self,validated_data):
+
+        
+        event = DayEvent.objects.create(
+        user=validated_data['user'],
+        event=validated_data['event'],
+        vote=validated_data['vote'],
+        )
+        
+
+
+
     
 
 
