@@ -30,8 +30,7 @@ class Event(models.Model):
     
 class DayEvent(models.Model):
     
-    DATE = [(1,1),(2, 2),(3, 3)]
-    user = models.CharField("Nombre",max_length=35)
+    
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
     vote= models.IntegerField(("Que fecha sera la carnita")) 
     

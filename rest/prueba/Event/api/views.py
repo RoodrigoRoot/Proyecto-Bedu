@@ -59,7 +59,10 @@ class VoteApisView(generics.ListCreateAPIView):
         day2=DayEvent.objects.filter( event=self.event_pk, vote=2).count(),
         day3=DayEvent.objects.filter( event=self.event_pk, vote=3).count(),
         if day1 > day2 and day1 > day3:
-            return '2019-01-01'
+            
+            e= Event.objects.values_list('day1')
+            print(e._fields('day1',))
+            return  '2019-01-01'
         elif day2 > day1 and day2 > day3:
             return '2019-02-02'
         else:
@@ -70,7 +73,6 @@ class VoteApisView(generics.ListCreateAPIView):
         e=Event.objects.get(id=self.event_pk),
         
         dayevent=DayEvent.objects.create(
-            user=request.POST['user'],
             event=Event(request.POST['event']),
             vote=request.POST['vote'],
         )

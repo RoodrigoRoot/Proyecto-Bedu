@@ -51,13 +51,12 @@ class VoteSerializer(serializers.ModelSerializer):
     #result = ResultsSerializer()
     class Meta:
         model=DayEvent
-        fields=('user', 'event', 'vote')
+        fields=('event', 'vote')
 
     def create(self,validated_data):
 
         
         event = DayEvent.objects.create(
-        user=validated_data['user'],
         event=validated_data['event'],
         vote=validated_data['vote'],
         )
