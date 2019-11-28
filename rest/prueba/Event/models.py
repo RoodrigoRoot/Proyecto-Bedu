@@ -1,9 +1,11 @@
 from django.db import models
 from Profile.models import Profile
+import uuid
 # Create your models here.
 class Event(models.Model):
     
     name_event = models.CharField(("Motivo"), max_length=200)
+    unique_id = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     creator = models.ForeignKey(Profile, on_delete=models.CASCADE)
     email1 = models.EmailField(("Primer invitado"), max_length=254)
     email2 = models.EmailField(("Segundo invitado"), max_length=254)

@@ -19,15 +19,15 @@ class App extends React.Component{
         <Layoult>
             <Switch>
                 <Route exact path ="/" component={Index}/>
-                <Route exact path ="/Login" component={Log}/>
-                <Route exact path ="/Registro" component={Register}/>
+                <Route exact path ="/Login/" component={Log}/>
+                <Route exact path ="/Registro/" component={Register}/>
                 <Route exact path ="/salir" component={Logout}/>
-                <Route exact path ="/Eventos" component={Event}/>
-                <Route exact path ="/Perfil" component={Profile}/>
-                <Route exact path ="/Perfil/:id" children={<Profile/>}/>
-                <Route exact path ="/Carne" component={CreateEvent}/>
-                <Route exact path ="/Detalles" component={Details}/>
-                <Route exact path ="/Detalles-Guest" component={Details}/>
+                <Route exact path ="/Eventos/" component={Event}/>
+                <Route exact path ="/Perfil/" component={Profile}/>
+                <Route exact path ="/Perfil/:id/" children={<Profile/>}/>
+                <Route exact path ="/Carne/" component={CreateEvent}/>
+                <Route exact path ="/Detalles/" component={Details}/>
+                <Route exact path ="/Guest/:id" component={Details}/>
                 <Route component={NotFound}/>
                
             </Switch>

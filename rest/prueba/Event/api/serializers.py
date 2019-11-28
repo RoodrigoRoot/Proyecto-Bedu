@@ -6,7 +6,7 @@ class EventSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Event
-        fields = ("id","name_event","creator","email1","email2","email3","email4","email5","email6","street","col","cp","references","day1","day2","day3","date","hour")
+        fields = ("id","unique_id","name_event","creator","email1","email2","email3","email4","email5","email6","street","col","cp","references","day1","day2","day3","date","hour")
         
     def create(self,validated_data):
         event = Event.objects.create(
