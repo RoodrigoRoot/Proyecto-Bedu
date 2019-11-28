@@ -32,11 +32,11 @@ class DayEvent(models.Model):
     
     
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
-    vote= models.DateField(("Que fecha sera la carnita"),max_length=12,null=True) 
+    vote= models.DateField(("Que fecha sera la carnita?"),max_length=12,null=True) 
     
     def __str__(self):
-        #return "{}: {}".format(self.vote, self.event)
-        return self.event
+        return "{}: {}".format(self.vote, self.event)
+        
 
     class Meta:
         verbose_name_plural="Votos"

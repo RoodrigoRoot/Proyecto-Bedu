@@ -11,6 +11,7 @@ from .permissions import *
 from rest_framework.permissions import IsAdminUser, IsAuthenticated,AllowAny
 from rest_framework import status
 from rest_framework.response import Response
+from rest_framework import status
 
 
 # Create your views here.
@@ -59,11 +60,12 @@ class VoteApisView(generics.ListCreateAPIView):
         day2=DayEvent.objects.filter( event=self.event_pk, vote=date).count(),
         day3=DayEvent.objects.filter( event=self.event_pk, vote=date).count(),
         dat=DayEvent.objects.filter(event=self.event_pk, vote=date)
-        
         for data in dat:
+            
+            year=data.vote.year
             day=data.vote.day
             month=data.vote.month
-            year=data.vote.year
+        
         final__date="{}-{}-{}".format(year,month,day)
 
         if day1 > day2 and day1 > day3:            
@@ -75,32 +77,28 @@ class VoteApisView(generics.ListCreateAPIView):
         
         
     def create(self,request,*args,**kwargs):      
-        #print(request.data['event'])
-        #print(request.data['vote'])
-        #print(help(request.POST.get('event')))
-        #print(list(request.POST.values()))
-        #print(request.POST.get('event'))
-        evt=Event.objects.filter(id=request.data['event']).values('id'),
-        print(list(evt))
+    
         dayevent=DayEvent.objects.create(
             
-            event=request.data['event'],
-            vote= request.data['vote']
+            event=Event.objects.get(id=self.event_pk),
+            vote=request.data['vote'],
         )
+        
+        
         
         if(Results.objects.filter(event=self.event_pk)):
             
-#            print(self.max_number(date=request.POST.get('vote')))
-            Results.objects.filter(event=self.event_pk).update(final_date=self.max_number(date=request.POST.get('vote')))
+#            
+            Results.objects.filter(event=self.event_pk).update(final_date=self.max_number(date=request.data['vote']))
             
         else:
             Results.objects.create(
-            event=Event(request.POST.get('event')),
-            final_date=self.max_number(date=request.POST.get('vote'))
+            event=Event.objects.get(id=self.event_pk),
+            final_date=self.max_number(date=request.data['vote'])
         )
         
             
-        return Response("exito")
+        return Response("Votos Aceptados")
         
 
 
