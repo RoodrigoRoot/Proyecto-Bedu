@@ -7,6 +7,7 @@ class Detail extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            id:"",
             name_event: "No tienes eventos registrados por el momento",
             street: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
             col: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
@@ -38,6 +39,7 @@ class Detail extends React.Component {
             if (data.length) {
                 data.map((item) => (
                     this.setState({
+                        
                         name_event: item.name_event,
                         street: item.street,
                         col: item.col,
@@ -84,6 +86,7 @@ class Detail extends React.Component {
 
                     <div className="event__details">
                         <div className="event__place">
+        <h1>{this.state.id}</h1>
                             <h2 className="event__h2">Lugar:</h2>
                             <span><p><strong>Calle:</strong> {this.state.street}<br /><strong>Colonia:</strong>{this.state.col}<br /><strong> Código Postal: </strong>{this.state.cp} </p>
                             </span><br />
