@@ -129,25 +129,6 @@ class Detail extends React.Component {
         }
 
     }
-    
-
-        /*  
-        try {
-            const input={
-                id=this.state.id,
-                
-            }
-
-
-        const {data} = request
-        console.log(data)
-            
-        } catch (error) {
-            console.log(error)
-        }
-     } */
-
-
 
     render() {
         return (

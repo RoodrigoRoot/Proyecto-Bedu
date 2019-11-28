@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/styles/out.scss'
+import '../../assets/styles/out.scss'
 const Out = () => {
     localStorage.removeItem('token')
     localStorage.removeItem('user_id')

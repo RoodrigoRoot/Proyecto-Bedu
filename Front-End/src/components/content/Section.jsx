@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import '../assets/styles/section.scss'
+import '../../assets/styles/section.scss'
 const Section = () => {
 
     return (

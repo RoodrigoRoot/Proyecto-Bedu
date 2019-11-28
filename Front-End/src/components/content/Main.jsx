@@ -1,7 +1,7 @@
 import React from 'react'
-import '../assets/styles/main.scss'
-import video from '../assets/media/Pexels Videos 3972.mp4'
-import Social from './Ext/Social'
+import '../../assets/styles/main.scss'
+import video from '../../assets/media/Pexels Videos 3972.mp4'
+import Social from './Social'
 const Main = () => {
     return (
         <main>

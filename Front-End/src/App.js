@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Log from './components/User/Login'
+import Log from './components/Log/Login'
 import Index from './pages/Index'
 import Register from './pages/Register'
 import Logout from './pages/Logout'
@@ -27,6 +27,7 @@ class App extends React.Component{
                 <Route exact path ="/Perfil/:id" children={<Profile/>}/>
                 <Route exact path ="/Carne" component={CreateEvent}/>
                 <Route exact path ="/Detalles" component={Details}/>
+                <Route exact path ="/Detalles-Guest" component={Details}/>
                 <Route component={NotFound}/>
                
             </Switch>

@@ -86,19 +86,18 @@ class VoteApisView(generics.ListCreateAPIView):
         
         
         
-        if(Results.objects.filter(event=self.event_pk)):
-            
-#            
+        if(Results.objects.filter(event=self.event_pk)):         
             Results.objects.filter(event=self.event_pk).update(final_date=self.max_number(date=request.data['vote']))
             
         else:
+            
             Results.objects.create(
             event=Event.objects.get(id=self.event_pk),
             final_date=self.max_number(date=request.data['vote'])
         )
         
             
-        return Response("Votos Aceptados")
+        return Response("Votos Aceptados",status=status.HTTP_201_CREATED)
         
 
 

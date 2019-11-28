@@ -1,5 +1,5 @@
 import React from 'react'
-import Out from '../components/Out'
+import Out from '../components/Log/Out'
 import '../assets/general.scss'
 const Logout = () => {
 
