@@ -35,7 +35,7 @@ class EventAPIView(generics.RetrieveUpdateDestroyAPIView):
         return Event.objects.filter(id=int(self.event_pk))
     
     serializer_class= EventSerializer
-    permission_classes=[IsAuthenticated,IsOwner]
+    permission_classes=[IsAuthenticated]
 
 
 ####Vote####
@@ -53,39 +53,53 @@ class VoteApisView(generics.ListCreateAPIView):
     serializer_class = VoteSerializer
     
     
-    def max_number(self):
+    def max_number(self,date):
         
-        day1=DayEvent.objects.filter( event=self.event_pk, vote=1).count(),
-        day2=DayEvent.objects.filter( event=self.event_pk, vote=2).count(),
-        day3=DayEvent.objects.filter( event=self.event_pk, vote=3).count(),
-        if day1 > day2 and day1 > day3:
-            
-            e= Event.objects.values_list('day1')
-            print(e._fields('day1',))
-            return  '2019-01-01'
+        day1=DayEvent.objects.filter( event=self.event_pk, vote=date).count(),
+        day2=DayEvent.objects.filter( event=self.event_pk, vote=date).count(),
+        day3=DayEvent.objects.filter( event=self.event_pk, vote=date).count(),
+        dat=DayEvent.objects.filter(event=self.event_pk, vote=date)
+        
+        for data in dat:
+            day=data.vote.day
+            month=data.vote.month
+            year=data.vote.year
+        final__date="{}-{}-{}".format(year,month,day)
+
+        if day1 > day2 and day1 > day3:            
+            return final__date
         elif day2 > day1 and day2 > day3:
-            return '2019-02-02'
+            return final__date
         else:
-            return '2019-03-03'
+            return final__date
         
         
-    def create(self,request,*args,**kwargs):
-        e=Event.objects.get(id=self.event_pk),
-        
+    def create(self,request,*args,**kwargs):      
+        #print(request.data['event'])
+        #print(request.data['vote'])
+        #print(help(request.POST.get('event')))
+        #print(list(request.POST.values()))
+        #print(request.POST.get('event'))
+        evt=Event.objects.filter(id=request.data['event']).values('id'),
+        print(list(evt))
         dayevent=DayEvent.objects.create(
-            event=Event(request.POST['event']),
-            vote=request.POST['vote'],
+            
+            event=request.data['event'],
+            vote= request.data['vote']
         )
+        
         if(Results.objects.filter(event=self.event_pk)):
-            print(self.max_number())
-            Results.objects.filter(event=self.event_pk).update(final_date=self.max_number())
-            return Response("exito")
+            
+#            print(self.max_number(date=request.POST.get('vote')))
+            Results.objects.filter(event=self.event_pk).update(final_date=self.max_number(date=request.POST.get('vote')))
+            
         else:
             Results.objects.create(
-            event=Event(request.POST['event']),
-            final_date=self.max_number()
+            event=Event(request.POST.get('event')),
+            final_date=self.max_number(date=request.POST.get('vote'))
         )
-            return Response("exito")
+        
+            
         return Response("exito")
         
 
@@ -95,7 +109,7 @@ class ResultAPIView(generics.ListCreateAPIView):
     queryset=Results.objects.all()
     serializer_class=ResultsSerializer
     permission_classes=[AllowAny]
-    
+"""     
     @property
     def event_pk(self):
         return self.kwargs['pk']
@@ -118,5 +132,5 @@ class ResultAPIView(generics.ListCreateAPIView):
         final_date = max_number(day1,day2,day3)
         Results.objects.create(event,final_date)
         return Results
-    
+     """
     
