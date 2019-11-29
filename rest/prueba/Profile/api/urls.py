@@ -6,7 +6,7 @@ urlpatterns = [
     path('api/usuarios/',CreateUsers.as_view()),
     path('api/usuarios/<int:pk>',UserList.as_view()),
     path('api/login/',views.obtain_auth_token),
-        path('api/v2/login/',CustomObtainAuthToken.as_view())
+    path('api/v2/login/',CustomObtainAuthToken.as_view())
     
     
 ]

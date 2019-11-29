@@ -1,10 +1,16 @@
 import React from 'react'
 import DetailGuest from '../components/guest/DetailGuest'
-
-const DetailGuest = ()=>(
-    <DetailGuest/>
-)
+import {useParams} from "react-router-dom";
 
 
 
-export default DetailGuest
+const Guest = ()=>{
+    let { id } = useParams();
+    
+return(    <div>
+        
+        <DetailGuest unique={id}/>
+    </div>
+    )
+}
+export default Guest

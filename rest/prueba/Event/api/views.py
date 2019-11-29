@@ -40,6 +40,17 @@ class EventAPIView(generics.RetrieveUpdateDestroyAPIView):
 
 
 ####Vote####
+class EventAPIGuestView(generics.ListAPIView):
+    
+    @property
+    def unique(self):
+        return self.kwargs['unique']
+
+    def get_queryset(self):
+        return Event.objects.filter(unique_id=self.unique)
+
+    serializer_class= EventSerializer
+    permission_classes=[]
 
 class VoteApisView(generics.ListCreateAPIView):    
 

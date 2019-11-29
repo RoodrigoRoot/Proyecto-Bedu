@@ -11,6 +11,7 @@ import Layoult from './components/Ext/Layoutl'
 import CreateEvent from './components/Events/FormE'
 import NotFound from './pages/NotFound'
 import Details from './pages/Details'
+import Guest from './pages/Guest'
 
 class App extends React.Component{
     render(){
@@ -27,7 +28,7 @@ class App extends React.Component{
                 <Route exact path ="/Perfil/:id/" children={<Profile/>}/>
                 <Route exact path ="/Carne/" component={CreateEvent}/>
                 <Route exact path ="/Detalles/" component={Details}/>
-                <Route exact path ="/Guest/:id" component={Details}/>
+                <Route exact path ="/Guest/:id"  children={<Guest/>} />
                 <Route component={NotFound}/>
                
             </Switch>

@@ -2,10 +2,14 @@ import React from 'react'
 import axios from 'axios'
 import "../../assets/styles/details.scss"
 
-class Detail extends React.Component {
+
+
+class DetailGuest extends React.Component {
 
     constructor(props) {
+        
         super(props)
+        
         this.state = {
             id:"",
             name_event: "No tienes eventos registrados por el momento",
@@ -19,6 +23,7 @@ class Detail extends React.Component {
             hour: ""
 
         }
+        
         this.getEvent()
     }
 
@@ -26,7 +31,10 @@ class Detail extends React.Component {
 
     async getEvent() {
         try {
-            let request = await axios.get('http://localhost:8000/api/eventos/', {
+
+            let {unique}=this.props
+            
+            let request = await axios.get(`http://localhost:8000/api/guest/${unique}`, {
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": `token ${localStorage.getItem('token')}`
@@ -58,10 +66,6 @@ class Detail extends React.Component {
                 alert("Carnal, no tienes eventos. Create uno e invitemos a todos los que puedas")
             }
 
-
-
-
-
         } catch (error) {
             console.log(error)
 
@@ -70,6 +74,7 @@ class Detail extends React.Component {
 
 
     _onSubmitVote = async (e)=>{
+        
         e.preventDefault()
         let input={
             id:"",
@@ -137,7 +142,7 @@ class Detail extends React.Component {
 
                 <div className="container__event">
                     <span className="event__title"><p>{this.state.name_event}</p></span>
-
+                    
 
                     <div className="event__details">
                         <div className="event__place">
@@ -186,4 +191,4 @@ class Detail extends React.Component {
 
 
 }
-export default Detail
+export default DetailGuest
