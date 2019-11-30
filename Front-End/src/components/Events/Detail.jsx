@@ -9,10 +9,10 @@ class Detail extends React.Component {
         this.state = {
             id:"",
             name_event: "No tienes eventos registrados por el momento",
-            street: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-            col: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+            street: "Tu corazon",
+            col: "Vida",
             cp: "44520",
-            references: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pretium erat et tellus vulputate, eu pretium nulla dapibus. Morbi rutrum aliquet nisi, vel dignissim velit ultricies vitae.  ",
+            references: "A la vuela con tu cara",
             day1: "1",
             day2: "",
             day3: "",
@@ -195,6 +195,7 @@ class Detail extends React.Component {
 
                             </ul>
                             <h3>Fecha Final: {this.state.date}</h3>
+                            
                         </div>
                     </div>
                 </div>

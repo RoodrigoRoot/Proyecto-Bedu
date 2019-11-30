@@ -70,7 +70,7 @@ ROOT_URLCONF = 'prueba.urls'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'leycourcino@gmail.com'
-EMAIL_HOST_PASSWORD = 'ancestral1995'
+EMAIL_HOST_PASSWORD = 'sisaroot1995&'
 EMAIL_USE_TLS = True
 
 TEMPLATES = [
@@ -98,10 +98,15 @@ WSGI_APPLICATION = 'prueba.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'carnitas',
+        'USER': 'root',
+        'PASSWORD': 'forever11',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
