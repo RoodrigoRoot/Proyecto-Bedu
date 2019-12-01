@@ -26,7 +26,7 @@ class Detail extends React.Component {
 
     async getEvent() {
         try {
-            let request = await axios.get('http://localhost:8000/api/eventos/', {
+            let request = await axios.get('http://18.223.168.22/api/eventos/', {
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": `token ${localStorage.getItem('token')}`
@@ -107,7 +107,7 @@ class Detail extends React.Component {
 
         try {
 
-            let request = await fetch(`http://localhost:8000/api/eventos/${this.state.id}/votos/`, {
+            let request = await fetch(`http://18.223.168.22/api/eventos/${this.state.id}/votos/`, {
                 body: JSON.stringify(input),
                 method: 'POST',
                 headers: {

@@ -50,7 +50,7 @@ class FormE extends React.Component{
         e.preventDefault()
         try{
             console.log(input)
-            await fetch('http://localhost:8000/api/eventos/',{
+            await fetch('http://18.223.168.22/api/eventos/',{
             body: JSON.stringify(input),
             method: 'POST',
                 headers:{
@@ -83,7 +83,7 @@ class FormE extends React.Component{
         */ 
             alert("Evento Creado")
 
-            window.location.replace('http://localhost:3000/Eventos')
+            window.location.replace('http://3.134.85.16//Eventos')
         }catch(error){
 
             console.log(error.message)
