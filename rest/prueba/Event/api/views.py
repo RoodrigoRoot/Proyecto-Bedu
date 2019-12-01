@@ -50,7 +50,7 @@ class EventAPIGuestView(generics.ListAPIView):
         return Event.objects.filter(unique_id=self.unique)
 
     serializer_class= EventSerializer
-    permission_classes=[]
+    permission_classes=[AllowAny]
 
 class VoteApisView(generics.ListCreateAPIView):    
 
