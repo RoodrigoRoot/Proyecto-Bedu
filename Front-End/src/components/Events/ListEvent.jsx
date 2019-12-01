@@ -34,7 +34,7 @@ async getEvent(){
         const {data} =request
         console.log(data)
         if(data.length){
-            data.map((item,index)=>(
+            data.map((item)=>(
                 this.setState({
                     name_event: item.name_event,
                     street:item.street,
