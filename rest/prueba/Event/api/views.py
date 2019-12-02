@@ -66,29 +66,58 @@ class VoteApisView(generics.CreateAPIView):
     permission_classes=[AllowAny]
     serializer_class = VoteSerializer
     
-    
+        
     def max_number(self,date):
+        event__day1=0
+        event__day2=0
+        event__day3=0
+        event=Event.objects.filter(id=self.event_pk)
         
-        day1=DayEvent.objects.filter( event=self.event_pk, vote=date).count(),
-        day2=DayEvent.objects.filter( event=self.event_pk, vote=date).count(),
-        day3=DayEvent.objects.filter( event=self.event_pk, vote=date).count(),
-        dat=DayEvent.objects.filter(event=self.event_pk, vote=date)
-        for data in dat:
-            
-            year=data.vote.year
-            day=data.vote.day
-            month=data.vote.month
-        
-        final__date="{}-{}-{}".format(year,month,day)
+        for evt in event:
+            year = evt.day1.year
+            month = evt.day1.month
+            day = evt.day1.day
+     
+        event__day1="{}-{}-{}".format(year, month, day)
 
-        if day1 > day2 and day1 > day3:            
-            return final__date
-        elif day2 > day1 and day2 > day3:
-            return final__date
+
+
+        for evt in event:
+            year=evt.day2.year
+            month=evt.day2.month
+            day=evt.day2.day
+     
+        event__day2="{}-{}-{}".format(year,month,day)
+        
+        for evt in event:
+            year=evt.day3.year
+            month=evt.day3.month
+            day=evt.day3.day
+     
+        event__day3="{}-{}-{}".format(year,month,day)
+        
+        day1=DayEvent.objects.filter(event=self.event_pk,
+                                    vote=event__day1).count()
+        
+        day2=DayEvent.objects.filter(event=self.event_pk,
+                                    vote=event__day2).count()
+        
+        day3=DayEvent.objects.filter(event=self.event_pk,
+                                    vote=event__day3).count()
+        
+        
+        if day1>day2 and day1>day3:
+            return event__day1
+        
+        elif day2>day1 and day2>day3:
+            return event__day2
+        
         else:
-            return final__date
+            return event__day3
+                                       
+               
         
-        
+ 
     def create(self,request,*args,**kwargs):      
     
         dayevent=DayEvent.objects.create(
@@ -99,7 +128,8 @@ class VoteApisView(generics.CreateAPIView):
         
         
         
-        if(Results.objects.filter(event=self.event_pk)):         
+        if(Results.objects.filter(event=self.event_pk)):  
+            print(request.data['vote'])       
             Results.objects.filter(event=self.event_pk).update(final_date=self.max_number(date=request.data['vote']))
             
         else:
