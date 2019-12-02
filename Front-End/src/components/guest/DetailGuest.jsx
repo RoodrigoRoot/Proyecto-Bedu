@@ -118,7 +118,7 @@ class DetailGuest extends React.Component {
             case "day2": {
                 input = {
                     id: this.state.id,
-                    vote: this.state.day3
+                    vote: this.state.day2
                 }
                 break;
             }

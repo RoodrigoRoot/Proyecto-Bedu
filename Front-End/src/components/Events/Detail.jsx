@@ -16,12 +16,36 @@ class Detail extends React.Component {
             day1: "1",
             day2: "",
             day3: "",
-            hour: ""
+            hour: "",
+            date:""
 
         }
         this.getEvent()
     }
 
+    async getDate() {
+
+        try {
+
+
+
+            let request = await axios.get(`http://18.223.168.22/api/eventos/${this.state.id}/votos/resultados/`, {
+                headers: {
+                    "Content-type": "application/json",
+                },
+
+            })
+            const { data } = request
+            data.map((item) => (
+                this.setState({
+                    date: item.final_date
+                })
+            ))
+        } catch (error) {
+
+            console.log(error)
+        }
+    }
 
 
     async getEvent() {
@@ -49,11 +73,10 @@ class Detail extends React.Component {
                         day2: item.day2,
                         day3: item.day3,
                         hour: item.hour,
-                        date: item.date,
                         vote:true
                     })
                 ))
-
+                    this.getDate()
             } else {
                 alert("Carnal, no tienes eventos. Create uno e invitemos a todos los que puedas")
             }
@@ -89,7 +112,7 @@ class Detail extends React.Component {
         case "day2":{
             input={
                 id:this.state.id,
-                vote:this.state.day3
+                vote:this.state.day2
             }
             break;
         }
@@ -131,21 +154,6 @@ class Detail extends React.Component {
     }
     
 
-        /*  
-        try {
-            const input={
-                id=this.state.id,
-                
-            }
-
-
-        const {data} = request
-        console.log(data)
-            
-        } catch (error) {
-            console.log(error)
-        }
-     } */
 
 
 

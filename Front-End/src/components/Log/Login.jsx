@@ -25,7 +25,7 @@ class Login extends Component {
             const { data } = request
             localStorage.setItem('token', data.token)
             localStorage.setItem('user_id', data.id)
-            window.location.replace('http://3.134.85.16/')
+            window.location.replace('http://52.14.68.235/')
 
 
         } catch (error) {

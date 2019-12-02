@@ -47,7 +47,7 @@ class Register extends Component {
       const { statusText } = request
       if (statusText === "Created") {
         alert("Registro completado. Bienvenido")
-        window.location.replace('http://3.134.85.16/Login')
+        window.location.replace('http://52.14.68.235/Login')
 
       }
 

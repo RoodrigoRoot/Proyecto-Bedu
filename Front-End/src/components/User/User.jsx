@@ -50,7 +50,7 @@ class User extends React.Component {
 
             }
                 
-             await fetch(`http://localhost:8000/api/usuarios/${localStorage.getItem('user_id')}`, {
+             await fetch(`http://18.223.168.22/api/usuarios/${localStorage.getItem('user_id')}`, {
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": `token ${localStorage.getItem('token')}`
@@ -70,7 +70,7 @@ class User extends React.Component {
     }
     _getUser = async () => {
         try {
-            let request = await axios.get(`http://localhost:8000/api/usuarios/${localStorage.getItem('user_id')}`, {
+            let request = await axios.get(`http://18.223.168.22/api/usuarios/${localStorage.getItem('user_id')}`, {
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": `token ${localStorage.getItem('token')}`

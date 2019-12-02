@@ -62,28 +62,9 @@ class FormE extends React.Component{
             })
             
             
-        /*
-            "name_event": "asdasdasd",
-    "creator": 2,
-    "email1": "1@gmail.com",
-    "email2": "2@gmail.com",
-    "email3": "2@gmail.com",
-    "email4": "",
-    "email5": "",
-    "email6": "",
-    "street": "Chapultepec",
-    "col": "jardines del bosque",
-    "cp": "44520",
-    "references": "sdafadsfaf",
-    "day1": "2019-11-24",
-    "day2": "2019-11-24",
-    "day3": "2019-11-24",
-    "date": "2019-11-24",
-    "hour": "01:38:15"
-        */ 
             alert("Evento Creado")
 
-            window.location.replace('http://3.134.85.16//Eventos')
+            window.location.replace('http://52.14.68.235/Eventos')
         }catch(error){
 
             console.log(error.message)
