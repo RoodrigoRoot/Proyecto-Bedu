@@ -29,7 +29,7 @@ class Detail extends React.Component {
 
 
 
-            let request = await axios.get(`http://18.223.168.22/api/eventos/${this.state.id}/votos/resultados/`, {
+            let request = await axios.get(`http://3.16.131.23/api/eventos/${this.state.id}/votos/resultados/`, {
                 headers: {
                     "Content-type": "application/json",
                 },

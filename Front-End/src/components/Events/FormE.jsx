@@ -50,7 +50,7 @@ class FormE extends React.Component{
         e.preventDefault()
         try{
             console.log(input)
-            await fetch('http://18.223.168.22/api/eventos/',{
+            await fetch('http://3.16.131.23/api/eventos/',{
             body: JSON.stringify(input),
             method: 'POST',
                 headers:{

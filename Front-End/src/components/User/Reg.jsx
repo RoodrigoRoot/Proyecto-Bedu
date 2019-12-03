@@ -36,7 +36,7 @@ class Register extends Component {
     }
 
     try {
-      let request = await fetch('http://18.223.168.22/api/usuarios/', {
+      let request = await fetch('http://3.16.131.23/api/usuarios/', {
         body: JSON.stringify(input),
         method: 'POST',
         headers: {
@@ -47,7 +47,7 @@ class Register extends Component {
       const { statusText } = request
       if (statusText === "Created") {
         alert("Registro completado. Bienvenido")
-        window.location.replace('http://52.14.68.235/Login')
+        window.location.replace('http://3.16.29.106/Login')
 
       }
 
